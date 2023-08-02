@@ -43,7 +43,7 @@ extension ArtworkCard {
 				//cardDescription(prompt: "Astronaut").frame(alignment: .bottom)
 			)
 			.overlay(
-				cardDescription(prompt: prompt).frame(alignment: .leading)
+				ArtworkCardDescription(prompt: prompt)
 			)
 	}
 	

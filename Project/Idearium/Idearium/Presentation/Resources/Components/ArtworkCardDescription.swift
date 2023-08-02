@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ArtworkCardDescription: View {
 	
+	@State var isFav: Bool = false
 	var prompt: String
 	
 	init(prompt: String = "undefined") {
@@ -24,7 +25,8 @@ struct ArtworkCardDescription: View {
 				.background(Color("red"))
 			Divider().frame(width: 20, height: 0)
 			//Spacer().frame(width: 10)
-			Image(systemName: "heart")
+			heartIconButton()
+			//Image(systemName: "heart")
 		}
 		.multilineTextAlignment(.leading)
 		.lineLimit(1)
@@ -35,6 +37,20 @@ struct ArtworkCardDescription: View {
 		//.frame(alignment: .leading)
 		.cornerRadius(15)
     }
+}
+
+extension ArtworkCardDescription {
+	
+	func heartIconButton() -> some View {
+		Button {
+			print("Fav button tapped")
+			isFav.toggle()
+		} label: {
+			Image(systemName: isFav ? "heart.fill" : "heart")
+				.foregroundColor(isFav ? .red : .white)
+		}
+	}
+	
 }
 
 struct ArtworkCardDescription_Previews: PreviewProvider {
