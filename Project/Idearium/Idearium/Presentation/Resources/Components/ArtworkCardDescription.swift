@@ -26,12 +26,11 @@ struct ArtworkCardDescription: View {
 			Divider().frame(width: 20, height: 0)
 			//Spacer().frame(width: 10)
 			heartIconButton()
-			//Image(systemName: "heart")
 		}
 		.multilineTextAlignment(.leading)
 		.lineLimit(1)
-		.padding([.bottom, .top], 13)
-		.padding([.leading, .trailing], 20)
+		.padding([.bottom, .top], 20)
+		.padding([.leading, .trailing], 24)
 		.foregroundColor(.white)
 		.background(Color("AppBackgroundColor"))
 		//.frame(alignment: .leading)
@@ -42,11 +41,15 @@ struct ArtworkCardDescription: View {
 extension ArtworkCardDescription {
 	
 	func heartIconButton() -> some View {
-		Button {
+		let scaleFavIcon: CGFloat = CGFloat(22)
+		
+		return Button {
 			print("Fav button tapped")
 			isFav.toggle()
 		} label: {
 			Image(systemName: isFav ? "heart.fill" : "heart")
+				.resizable()
+				.frame(width: scaleFavIcon + 2.0, height: scaleFavIcon)
 				.foregroundColor(isFav ? .red : .white)
 		}
 	}
@@ -56,5 +59,6 @@ extension ArtworkCardDescription {
 struct ArtworkCardDescription_Previews: PreviewProvider {
     static var previews: some View {
         ArtworkCardDescription()
+		ArtworkCard(image: Image("astronaut_horse"), prompt: "An astronaut riding a horse on Mars")
     }
 }

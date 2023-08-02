@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct ArtworkCard: View {
+	
+	// MARK: - States
+
+	// MARK: - Vars
+	private let image: Image
+	private let prompt: String
+	
+	init(image: Image, prompt: String) {
+		self.image = image
+		self.prompt = prompt
+	}
+	
     var body: some View {
 		ZStack(alignment: .center){
-			
-			imageSquare(image: Image("astronaut_horse"), prompt: "An astronaut mars")
-			//cardDescription(prompt: "An astronaut riding a horse in mars")
-			
+			imageSquare(image: self.image, prompt: self.prompt)
 		}
 		.frame(width: 370, height: 438)
 		.shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
@@ -24,6 +33,8 @@ struct ArtworkCard: View {
 
 extension ArtworkCard {
 
+	// Is the main part of the component. The part of stroke, shadow
+	// and image. Its overlayed by ArtworkCardDescription
 	func imageSquare(image: Image, prompt: String) -> some View {
 		Rectangle()
 			.foregroundColor(.clear)
@@ -44,47 +55,14 @@ extension ArtworkCard {
 			)
 			.overlay(
 				ArtworkCardDescription(prompt: prompt)
+					.position(.init(x: 370/2, y: 348))
 			)
 	}
-	
-//	func cardDescription(prompt: String) -> some View {
-//		HStack() {
-//			Text(prompt)
-//				.multilineTextAlignment(.leading)
-//				//.frame(width: 260)
-//				.frame(maxWidth: 260, alignment: .leading)
-//				.background(Color("red"))
-//			Divider().frame(width: 20, height: 0)
-//			//Spacer().frame(width: 10)
-//			Image(systemName: "heart")
-//		}
-//		.multilineTextAlignment(.leading)
-//		.lineLimit(1)
-//		.padding([.bottom, .top], 13)
-//		.padding([.leading, .trailing], 20)
-//		.foregroundColor(.white)
-//		.background(Color("AppBackgroundColor"))
-//		//.frame(alignment: .leading)
-//		.cornerRadius(15)
-
-//		Rectangle()
-//			.foregroundColor(.clear)
-//			.frame(width: 370, height: 81, alignment: .center)
-//			.background(Color("AppBackgroundColor"))
-//			.cornerRadius(15)
-//			.overlay(
-//				RoundedRectangle(cornerRadius: 15)
-//				.inset(by: 0.5)
-//				.stroke(.white, lineWidth: 1)
-//			).frame(alignment: .bottom)
-//	}
-	
-	
 }
 
 struct ArtworkCard_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworkCard()
+        ArtworkCard(image: Image("astronaut_horse"), prompt: "An astronaut riding a horse on Mars")
 		HomeView()
     }
 }

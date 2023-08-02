@@ -15,9 +15,9 @@ struct HomeView: View {
 		
 		NavigationStack {
 			List {
-				ArtworkCard()
-				ArtworkCard()
-				ArtworkCard()
+				ArtworkCard(image: Image("astronaut_horse"), prompt: "An astronaut riding a horse on Mars")
+				ArtworkCard(image: Image("astronaut_horse"), prompt: "An astronaut riding a horse on Mars")
+				ArtworkCard(image: Image("astronaut_horse"), prompt: "An astronaut riding a horse on Mars")
 			}
 			.scrollIndicators(.hidden)
 			.padding(10)
