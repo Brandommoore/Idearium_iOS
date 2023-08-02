@@ -24,6 +24,7 @@ struct SplashScreen: View {
 					.ignoresSafeArea(.all)
 			}
 			.background(Color("AppBackgroundColor"))
+			.preferredColorScheme(.dark)
 			// On appear after 2.5s delay, change "isActive" state to true
 			.onAppear {
 				DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
