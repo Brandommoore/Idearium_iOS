@@ -18,6 +18,7 @@
 		167B1A222A7A433E0036BC0F /* IdeariumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A212A7A433E0036BC0F /* IdeariumUITests.swift */; };
 		167B1A242A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A232A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift */; };
 		167B1A322A7A435C0036BC0F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 167B1A312A7A435C0036BC0F /* Lottie */; };
+		1684B5582A7AD8F500E79A2A /* ArtworkCardDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B5572A7AD8F500E79A2A /* ArtworkCardDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		167B1A1D2A7A433E0036BC0F /* IdeariumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeariumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		167B1A212A7A433E0036BC0F /* IdeariumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeariumUITests.swift; sourceTree = "<group>"; };
 		167B1A232A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeariumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1684B5572A7AD8F500E79A2A /* ArtworkCardDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCardDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				1675A5AE2A7AA75F000F7868 /* ArtworkCard.swift */,
+				1684B5572A7AD8F500E79A2A /* ArtworkCardDescription.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				1658ABB22A7AA0AC009B2394 /* SplashScreen.swift in Sources */,
 				1675A5AC2A7AA41D000F7868 /* HomeView.swift in Sources */,
 				167B1A092A7A433D0036BC0F /* ContentView.swift in Sources */,
+				1684B5582A7AD8F500E79A2A /* ArtworkCardDescription.swift in Sources */,
 				1675A5AF2A7AA75F000F7868 /* ArtworkCard.swift in Sources */,
 				167B1A072A7A433D0036BC0F /* IdeariumApp.swift in Sources */,
 			);
