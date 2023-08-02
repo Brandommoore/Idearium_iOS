@@ -1,0 +1,691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1658ABB22A7AA0AC009B2394 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658ABB12A7AA0AC009B2394 /* SplashScreen.swift */; };
+		1675A5AC2A7AA41D000F7868 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675A5AB2A7AA41D000F7868 /* HomeView.swift */; };
+		167B1A072A7A433D0036BC0F /* IdeariumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A062A7A433D0036BC0F /* IdeariumApp.swift */; };
+		167B1A092A7A433D0036BC0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A082A7A433D0036BC0F /* ContentView.swift */; };
+		167B1A0B2A7A433E0036BC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167B1A0A2A7A433E0036BC0F /* Assets.xcassets */; };
+		167B1A0E2A7A433E0036BC0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167B1A0D2A7A433E0036BC0F /* Preview Assets.xcassets */; };
+		167B1A182A7A433E0036BC0F /* IdeariumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A172A7A433E0036BC0F /* IdeariumTests.swift */; };
+		167B1A222A7A433E0036BC0F /* IdeariumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A212A7A433E0036BC0F /* IdeariumUITests.swift */; };
+		167B1A242A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A232A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift */; };
+		167B1A322A7A435C0036BC0F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 167B1A312A7A435C0036BC0F /* Lottie */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		167B1A142A7A433E0036BC0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 167B19FB2A7A433D0036BC0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 167B1A022A7A433D0036BC0F;
+			remoteInfo = Idearium;
+		};
+		167B1A1E2A7A433E0036BC0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 167B19FB2A7A433D0036BC0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 167B1A022A7A433D0036BC0F;
+			remoteInfo = Idearium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1658ABB12A7AA0AC009B2394 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		1675A5AB2A7AA41D000F7868 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		167B1A032A7A433D0036BC0F /* Idearium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Idearium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		167B1A062A7A433D0036BC0F /* IdeariumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeariumApp.swift; sourceTree = "<group>"; };
+		167B1A082A7A433D0036BC0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		167B1A0A2A7A433E0036BC0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		167B1A0D2A7A433E0036BC0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		167B1A132A7A433E0036BC0F /* IdeariumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeariumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		167B1A172A7A433E0036BC0F /* IdeariumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeariumTests.swift; sourceTree = "<group>"; };
+		167B1A1D2A7A433E0036BC0F /* IdeariumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeariumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		167B1A212A7A433E0036BC0F /* IdeariumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeariumUITests.swift; sourceTree = "<group>"; };
+		167B1A232A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeariumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		167B1A002A7A433D0036BC0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167B1A322A7A435C0036BC0F /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B1A102A7A433E0036BC0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B1A1A2A7A433E0036BC0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1658ABAA2A7A9FA8009B2394 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1658ABAB2A7A9FAE009B2394 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1658ABAC2A7A9FBA009B2394 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1658ABAF2A7AA04E009B2394 /* Resources */,
+				1675A5AA2A7AA401000F7868 /* Home */,
+				1658ABB02A7AA08C009B2394 /* Splash */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1658ABAD2A7A9FD7009B2394 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1658ABAE2A7A9FFC009B2394 /* Resources */,
+				167B1A062A7A433D0036BC0F /* IdeariumApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1658ABAE2A7A9FFC009B2394 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				167B1A0A2A7A433E0036BC0F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1658ABAF2A7AA04E009B2394 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1675A5AD2A7AA587000F7868 /* Components */,
+				167B1A0C2A7A433E0036BC0F /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1658ABB02A7AA08C009B2394 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				1658ABB12A7AA0AC009B2394 /* SplashScreen.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		1675A5AA2A7AA401000F7868 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1675A5AB2A7AA41D000F7868 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1675A5AD2A7AA587000F7868 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		167B19FA2A7A433D0036BC0F = {
+			isa = PBXGroup;
+			children = (
+				167B1A052A7A433D0036BC0F /* Idearium */,
+				167B1A162A7A433E0036BC0F /* IdeariumTests */,
+				167B1A202A7A433E0036BC0F /* IdeariumUITests */,
+				167B1A042A7A433D0036BC0F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		167B1A042A7A433D0036BC0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				167B1A032A7A433D0036BC0F /* Idearium.app */,
+				167B1A132A7A433E0036BC0F /* IdeariumTests.xctest */,
+				167B1A1D2A7A433E0036BC0F /* IdeariumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		167B1A052A7A433D0036BC0F /* Idearium */ = {
+			isa = PBXGroup;
+			children = (
+				1658ABAA2A7A9FA8009B2394 /* Data */,
+				1658ABAB2A7A9FAE009B2394 /* Domain */,
+				1658ABAC2A7A9FBA009B2394 /* Presentation */,
+				1658ABAD2A7A9FD7009B2394 /* App */,
+				167B1A082A7A433D0036BC0F /* ContentView.swift */,
+			);
+			path = Idearium;
+			sourceTree = "<group>";
+		};
+		167B1A0C2A7A433E0036BC0F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				167B1A0D2A7A433E0036BC0F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		167B1A162A7A433E0036BC0F /* IdeariumTests */ = {
+			isa = PBXGroup;
+			children = (
+				167B1A172A7A433E0036BC0F /* IdeariumTests.swift */,
+			);
+			path = IdeariumTests;
+			sourceTree = "<group>";
+		};
+		167B1A202A7A433E0036BC0F /* IdeariumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				167B1A212A7A433E0036BC0F /* IdeariumUITests.swift */,
+				167B1A232A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift */,
+			);
+			path = IdeariumUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		167B1A022A7A433D0036BC0F /* Idearium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 167B1A272A7A433E0036BC0F /* Build configuration list for PBXNativeTarget "Idearium" */;
+			buildPhases = (
+				167B19FF2A7A433D0036BC0F /* Sources */,
+				167B1A002A7A433D0036BC0F /* Frameworks */,
+				167B1A012A7A433D0036BC0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Idearium;
+			packageProductDependencies = (
+				167B1A312A7A435C0036BC0F /* Lottie */,
+			);
+			productName = Idearium;
+			productReference = 167B1A032A7A433D0036BC0F /* Idearium.app */;
+			productType = "com.apple.product-type.application";
+		};
+		167B1A122A7A433E0036BC0F /* IdeariumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 167B1A2A2A7A433E0036BC0F /* Build configuration list for PBXNativeTarget "IdeariumTests" */;
+			buildPhases = (
+				167B1A0F2A7A433E0036BC0F /* Sources */,
+				167B1A102A7A433E0036BC0F /* Frameworks */,
+				167B1A112A7A433E0036BC0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				167B1A152A7A433E0036BC0F /* PBXTargetDependency */,
+			);
+			name = IdeariumTests;
+			productName = IdeariumTests;
+			productReference = 167B1A132A7A433E0036BC0F /* IdeariumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		167B1A1C2A7A433E0036BC0F /* IdeariumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 167B1A2D2A7A433E0036BC0F /* Build configuration list for PBXNativeTarget "IdeariumUITests" */;
+			buildPhases = (
+				167B1A192A7A433E0036BC0F /* Sources */,
+				167B1A1A2A7A433E0036BC0F /* Frameworks */,
+				167B1A1B2A7A433E0036BC0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				167B1A1F2A7A433E0036BC0F /* PBXTargetDependency */,
+			);
+			name = IdeariumUITests;
+			productName = IdeariumUITests;
+			productReference = 167B1A1D2A7A433E0036BC0F /* IdeariumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		167B19FB2A7A433D0036BC0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					167B1A022A7A433D0036BC0F = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					167B1A122A7A433E0036BC0F = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 167B1A022A7A433D0036BC0F;
+					};
+					167B1A1C2A7A433E0036BC0F = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 167B1A022A7A433D0036BC0F;
+					};
+				};
+			};
+			buildConfigurationList = 167B19FE2A7A433D0036BC0F /* Build configuration list for PBXProject "Idearium" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 167B19FA2A7A433D0036BC0F;
+			packageReferences = (
+				167B1A302A7A435C0036BC0F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = 167B1A042A7A433D0036BC0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				167B1A022A7A433D0036BC0F /* Idearium */,
+				167B1A122A7A433E0036BC0F /* IdeariumTests */,
+				167B1A1C2A7A433E0036BC0F /* IdeariumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		167B1A012A7A433D0036BC0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167B1A0E2A7A433E0036BC0F /* Preview Assets.xcassets in Resources */,
+				167B1A0B2A7A433E0036BC0F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B1A112A7A433E0036BC0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B1A1B2A7A433E0036BC0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		167B19FF2A7A433D0036BC0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1658ABB22A7AA0AC009B2394 /* SplashScreen.swift in Sources */,
+				1675A5AC2A7AA41D000F7868 /* HomeView.swift in Sources */,
+				167B1A092A7A433D0036BC0F /* ContentView.swift in Sources */,
+				167B1A072A7A433D0036BC0F /* IdeariumApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B1A0F2A7A433E0036BC0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167B1A182A7A433E0036BC0F /* IdeariumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B1A192A7A433E0036BC0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167B1A242A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift in Sources */,
+				167B1A222A7A433E0036BC0F /* IdeariumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		167B1A152A7A433E0036BC0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 167B1A022A7A433D0036BC0F /* Idearium */;
+			targetProxy = 167B1A142A7A433E0036BC0F /* PBXContainerItemProxy */;
+		};
+		167B1A1F2A7A433E0036BC0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 167B1A022A7A433D0036BC0F /* Idearium */;
+			targetProxy = 167B1A1E2A7A433E0036BC0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		167B1A252A7A433E0036BC0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		167B1A262A7A433E0036BC0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		167B1A282A7A433E0036BC0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Idearium/Presentation/Resources/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manu.Idearium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		167B1A292A7A433E0036BC0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Idearium/Presentation/Resources/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manu.Idearium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		167B1A2B2A7A433E0036BC0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manu.IdeariumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Idearium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Idearium";
+			};
+			name = Debug;
+		};
+		167B1A2C2A7A433E0036BC0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manu.IdeariumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Idearium.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Idearium";
+			};
+			name = Release;
+		};
+		167B1A2E2A7A433E0036BC0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manu.IdeariumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Idearium;
+			};
+			name = Debug;
+		};
+		167B1A2F2A7A433E0036BC0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manu.IdeariumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Idearium;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		167B19FE2A7A433D0036BC0F /* Build configuration list for PBXProject "Idearium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167B1A252A7A433E0036BC0F /* Debug */,
+				167B1A262A7A433E0036BC0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		167B1A272A7A433E0036BC0F /* Build configuration list for PBXNativeTarget "Idearium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167B1A282A7A433E0036BC0F /* Debug */,
+				167B1A292A7A433E0036BC0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		167B1A2A2A7A433E0036BC0F /* Build configuration list for PBXNativeTarget "IdeariumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167B1A2B2A7A433E0036BC0F /* Debug */,
+				167B1A2C2A7A433E0036BC0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		167B1A2D2A7A433E0036BC0F /* Build configuration list for PBXNativeTarget "IdeariumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167B1A2E2A7A433E0036BC0F /* Debug */,
+				167B1A2F2A7A433E0036BC0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		167B1A302A7A435C0036BC0F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		167B1A312A7A435C0036BC0F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 167B1A302A7A435C0036BC0F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 167B19FB2A7A433D0036BC0F /* Project object */;
+}
