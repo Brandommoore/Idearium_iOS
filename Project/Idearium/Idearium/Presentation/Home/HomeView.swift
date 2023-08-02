@@ -9,7 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("HomeView")
+		NavigationStack {
+			List {
+				ArtworkCard()
+				ArtworkCard()
+				ArtworkCard()
+			}
+			.scrollContentBackground(.hidden)
+			
+		}
+		.ignoresSafeArea(.all)
 	}
 }
 

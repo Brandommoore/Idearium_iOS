@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1658ABB22A7AA0AC009B2394 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658ABB12A7AA0AC009B2394 /* SplashScreen.swift */; };
 		1675A5AC2A7AA41D000F7868 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675A5AB2A7AA41D000F7868 /* HomeView.swift */; };
+		1675A5AF2A7AA75F000F7868 /* ArtworkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675A5AE2A7AA75F000F7868 /* ArtworkCard.swift */; };
 		167B1A072A7A433D0036BC0F /* IdeariumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A062A7A433D0036BC0F /* IdeariumApp.swift */; };
 		167B1A092A7A433D0036BC0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A082A7A433D0036BC0F /* ContentView.swift */; };
 		167B1A0B2A7A433E0036BC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167B1A0A2A7A433E0036BC0F /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		1658ABB12A7AA0AC009B2394 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		1675A5AB2A7AA41D000F7868 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1675A5AE2A7AA75F000F7868 /* ArtworkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCard.swift; sourceTree = "<group>"; };
 		167B1A032A7A433D0036BC0F /* Idearium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Idearium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167B1A062A7A433D0036BC0F /* IdeariumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeariumApp.swift; sourceTree = "<group>"; };
 		167B1A082A7A433D0036BC0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		1675A5AD2A7AA587000F7868 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1675A5AE2A7AA75F000F7868 /* ArtworkCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				1658ABB22A7AA0AC009B2394 /* SplashScreen.swift in Sources */,
 				1675A5AC2A7AA41D000F7868 /* HomeView.swift in Sources */,
 				167B1A092A7A433D0036BC0F /* ContentView.swift in Sources */,
+				1675A5AF2A7AA75F000F7868 /* ArtworkCard.swift in Sources */,
 				167B1A072A7A433D0036BC0F /* IdeariumApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
