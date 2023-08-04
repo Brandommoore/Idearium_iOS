@@ -25,7 +25,8 @@ struct ArtworkCardDescription: View {
 				.background(Color("red"))
 			Divider().frame(width: 20, height: 0)
 			//Spacer().frame(width: 10)
-			heartIconButton()
+			//heartIconButton()
+			heartIcon(isFav: false)			// Changue on ViewModel
 		}
 		.multilineTextAlignment(.leading)
 		.lineLimit(1)
@@ -51,6 +52,13 @@ extension ArtworkCardDescription {
 				.frame(width: scaleFavIcon + 2.0, height: scaleFavIcon)
 				.foregroundColor(isFav ? Color(.red) : Color(.white))
 		}
+	}
+	
+	func heartIcon(isFav: Bool) -> some View {
+		Image(systemName: isFav ? "heart.fill" : "heart")
+			.resizable()
+			.frame(width: 24, height: 22)
+			.foregroundColor(isFav ? Color(.red) : Color(.white))
 	}
 	
 }
