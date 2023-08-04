@@ -33,7 +33,6 @@ struct ArtworkCardDescription: View {
 		.padding([.leading, .trailing], 24)
 		.foregroundColor(.white)
 		.background(Color("AppBackgroundColor"))
-		//.frame(alignment: .leading)
 		.cornerRadius(15)
     }
 }
@@ -50,7 +49,7 @@ extension ArtworkCardDescription {
 			Image(systemName: isFav ? "heart.fill" : "heart")
 				.resizable()
 				.frame(width: scaleFavIcon + 2.0, height: scaleFavIcon)
-				.foregroundColor(isFav ? .red : .white)
+				.foregroundColor(isFav ? Color(.red) : Color(.white))
 		}
 	}
 	

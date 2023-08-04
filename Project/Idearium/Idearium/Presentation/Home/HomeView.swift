@@ -12,6 +12,8 @@ struct HomeView: View {
 		
 		// MARK: - Vars
 		let bgcol = Color("AppBackgroundColor")
+		var windowWidth = UIScreen.main.bounds.size.width
+		var windowHeight = UIScreen.main.bounds.size.height
 		
 		VStack(alignment: .leading, spacing: 0) {
 			Image("Idearium_text")

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161433962A7CFA8000C8D9EB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161433952A7CFA7F00C8D9EB /* RootView.swift */; };
+		161433982A7CFA8C00C8D9EB /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161433972A7CFA8C00C8D9EB /* RootViewModel.swift */; };
 		1658ABB22A7AA0AC009B2394 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658ABB12A7AA0AC009B2394 /* SplashScreen.swift */; };
 		1675A5AC2A7AA41D000F7868 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675A5AB2A7AA41D000F7868 /* HomeView.swift */; };
 		1675A5AF2A7AA75F000F7868 /* ArtworkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675A5AE2A7AA75F000F7868 /* ArtworkCard.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		161433952A7CFA7F00C8D9EB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		161433972A7CFA8C00C8D9EB /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		1658ABB12A7AA0AC009B2394 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		1675A5AB2A7AA41D000F7868 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1675A5AE2A7AA75F000F7868 /* ArtworkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCard.swift; sourceTree = "<group>"; };
@@ -83,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		161433932A7CF93600C8D9EB /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				161433952A7CFA7F00C8D9EB /* RootView.swift */,
+				161433972A7CFA8C00C8D9EB /* RootViewModel.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
 		1658ABAA2A7A9FA8009B2394 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +113,7 @@
 		1658ABAC2A7A9FBA009B2394 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				161433932A7CF93600C8D9EB /* RootView */,
 				1684B5592A7B0F6B00E79A2A /* DetailView */,
 				1658ABAF2A7AA04E009B2394 /* Resources */,
 				1675A5AA2A7AA401000F7868 /* Home */,
@@ -360,12 +374,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161433962A7CFA8000C8D9EB /* RootView.swift in Sources */,
 				1658ABB22A7AA0AC009B2394 /* SplashScreen.swift in Sources */,
 				1675A5AC2A7AA41D000F7868 /* HomeView.swift in Sources */,
 				167B1A092A7A433D0036BC0F /* ContentView.swift in Sources */,
 				1684B55B2A7B0F7B00E79A2A /* DetailView.swift in Sources */,
 				1684B5582A7AD8F500E79A2A /* ArtworkCardDescription.swift in Sources */,
 				1675A5AF2A7AA75F000F7868 /* ArtworkCard.swift in Sources */,
+				161433982A7CFA8C00C8D9EB /* RootViewModel.swift in Sources */,
 				167B1A072A7A433D0036BC0F /* IdeariumApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

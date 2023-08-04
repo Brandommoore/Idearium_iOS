@@ -13,6 +13,7 @@ struct IdeariumApp: App {
         WindowGroup {
             //ContentView()
 			SplashScreen()
+			//DetailView()
         }
     }
 }
