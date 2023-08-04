@@ -51,7 +51,6 @@ extension ArtworkCard {
 				RoundedRectangle(cornerRadius: 15)
 				.inset(by: 0.5)
 				.stroke(.white, lineWidth: 1)
-				//cardDescription(prompt: "Astronaut").frame(alignment: .bottom)
 			)
 			.overlay(
 				ArtworkCardDescription(prompt: prompt)
