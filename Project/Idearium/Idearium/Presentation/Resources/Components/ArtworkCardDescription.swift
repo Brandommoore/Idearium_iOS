@@ -40,20 +40,6 @@ struct ArtworkCardDescription: View {
 
 extension ArtworkCardDescription {
 	
-	func heartIconButton() -> some View {
-		let scaleFavIcon: CGFloat = CGFloat(22)
-		
-		return Button {
-			print("Fav button tapped")
-			isFav.toggle()
-		} label: {
-			Image(systemName: isFav ? "heart.fill" : "heart")
-				.resizable()
-				.frame(width: scaleFavIcon + 2.0, height: scaleFavIcon)
-				.foregroundColor(isFav ? Color(.red) : Color(.white))
-		}
-	}
-	
 	func heartIcon(isFav: Bool) -> some View {
 		Image(systemName: isFav ? "heart.fill" : "heart")
 			.resizable()

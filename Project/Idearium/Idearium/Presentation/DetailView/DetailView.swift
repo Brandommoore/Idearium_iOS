@@ -9,6 +9,9 @@ import SwiftUI
 
 struct DetailView: View {
 	
+	// MARK: - States
+	@State var isFav: Bool = false
+	
 	// Vars
 	var windowWidth = UIScreen.main.bounds.size.width
 	
@@ -34,25 +37,23 @@ struct DetailView: View {
 
 extension DetailView {
 	
+	// Main image component of detail view
 	func imageDetailView(image: Image) -> some View {
 		ZStack(alignment: .top) {
+			// Image component
 			VStack(alignment: .leading){
 				image
 					.resizable()
 					.scaledToFill()
 			}
 			ZStack {
+				// NavigationBar
 				HStack {
-					Button{
-						print("Return button pulsed")
-					} label: {
-						Image(systemName: "arrowtriangle.left.fill")
-							.resizable()
-							.frame(width: 25, height: 25)
-							.foregroundColor(.white)
-							.padding(.top, 60)
-					}
-					Spacer().frame(width: windowWidth - 80)
+					returnButton()
+					Spacer().frame(width: windowWidth - 110)
+					heartIconButton(istrue: false)
+						.padding(.top, 60)
+						.padding(.trailing)
 				}
 			}
 		}
@@ -62,6 +63,7 @@ extension DetailView {
 		.frame(height: 600)
 	}
 	
+	// Text labels of the DetailView
 	func textLabelComponent(title: String, description: String, promptType: Bool = false) -> some View {
 		VStack(alignment: .leading, spacing: 5) {
 			Text(title)
@@ -83,6 +85,36 @@ extension DetailView {
 					.fontWeight(.light)
 			}
 		}.multilineTextAlignment(.leading)
+	}
+	
+	// Return button of topNavigationBar
+	func returnButton() -> some View {
+		Button{
+			print("Return button pulsed")
+		} label: {
+			Image(systemName: "arrowtriangle.left.fill")
+				.resizable()
+				.frame(width: 25, height: 25)
+				.foregroundColor(.white)
+				.padding(.top, 70) 	// This is the top margin of all button bar
+				.padding(.leading)
+		}
+	}
+	
+	// Button icon if is fav
+	func heartIconButton(istrue: Bool) -> some View {
+		let scaleFavIcon: CGFloat = CGFloat(25)
+
+		return Button {
+			print("Fav button tapped")
+			print("FavButtoState --> \(isFav)")
+			isFav.toggle()
+		} label: {
+			Image(systemName: isFav ? "heart.fill" : "heart")
+				.resizable()
+				.frame(width: scaleFavIcon + 2.0, height: scaleFavIcon)
+				.foregroundColor(isFav ? (.red) : Color(.white))
+		}
 	}
 }
 
