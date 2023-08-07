@@ -65,7 +65,7 @@ extension HomeView {
 				.background(Color("AppBackgroundColor"))
 			Button {
 				print("NewArtworkButtonPulsed")
-				//NewArtworkView()
+				NewArtworkView()
 			} label: {
 				Image(systemName: "plus.square")
 					.resizable()

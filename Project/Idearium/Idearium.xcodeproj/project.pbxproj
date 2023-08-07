@@ -30,6 +30,8 @@
 		16DAB4E32A80CBBE00609036 /* ReplicateRemDatSourImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4E22A80CBBE00609036 /* ReplicateRemDatSourImp.swift */; };
 		16DAB4E62A80CBE900609036 /* ReplicateDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4E52A80CBE900609036 /* ReplicateDataSourceProtocol.swift */; };
 		16DAB4E82A80CC0200609036 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4E72A80CC0200609036 /* Tokens.swift */; };
+		16DAB4EB2A81230600609036 /* NewArtworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4EA2A81230600609036 /* NewArtworkModel.swift */; };
+		16DAB4EE2A81231500609036 /* PromptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4ED2A81231500609036 /* PromptParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		16DAB4E22A80CBBE00609036 /* ReplicateRemDatSourImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRemDatSourImp.swift; sourceTree = "<group>"; };
 		16DAB4E52A80CBE900609036 /* ReplicateDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateDataSourceProtocol.swift; sourceTree = "<group>"; };
 		16DAB4E72A80CC0200609036 /* Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
+		16DAB4EA2A81230600609036 /* NewArtworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArtworkModel.swift; sourceTree = "<group>"; };
+		16DAB4ED2A81231500609036 /* PromptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +128,9 @@
 		1614339A2A7D2AC100C8D9EB /* NewArtwork */ = {
 			isa = PBXGroup;
 			children = (
+				16DAB4EC2A81230900609036 /* Utils */,
 				1614339C2A7D2B4400C8D9EB /* NewArtworkView.swift */,
+				16DAB4EA2A81230600609036 /* NewArtworkModel.swift */,
 			);
 			path = NewArtwork;
 			sourceTree = "<group>";
@@ -318,6 +324,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		16DAB4EC2A81230900609036 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				16DAB4ED2A81231500609036 /* PromptParser.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DAB4EB2A81230600609036 /* NewArtworkModel.swift in Sources */,
 				1614339D2A7D2B4400C8D9EB /* NewArtworkView.swift in Sources */,
 				16DAB4D72A80C3C700609036 /* LoadView.swift in Sources */,
 				161433962A7CFA8000C8D9EB /* RootView.swift in Sources */,
@@ -464,6 +479,7 @@
 				1684B55B2A7B0F7B00E79A2A /* DetailView.swift in Sources */,
 				1684B5582A7AD8F500E79A2A /* ArtworkCardDescription.swift in Sources */,
 				16DAB4DD2A80CA6700609036 /* Idea.swift in Sources */,
+				16DAB4EE2A81231500609036 /* PromptParser.swift in Sources */,
 				16DAB4E62A80CBE900609036 /* ReplicateDataSourceProtocol.swift in Sources */,
 				1675A5AF2A7AA75F000F7868 /* ArtworkCard.swift in Sources */,
 				16DAB4E82A80CC0200609036 /* Tokens.swift in Sources */,
