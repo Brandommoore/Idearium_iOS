@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Prediction {
+struct Prediction: Decodable {
 	let id: String
 	let inputPrompt: String
 	let output: String

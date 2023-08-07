@@ -28,12 +28,60 @@ class ReplicateRemDatSourImp: ReplicateDataSourceProtocol {
 	}
 	
 	func getPrediction(prompt: String, completion: @escaping (Prediction?, NetworkError?) -> ()) {
-		<#code#>
+		guard let urlRequest = getSessionPrediction(prompt: prompt) else {
+			completion(nil, .malformedUrl)
+			return
+		}
+		let task = session.dataTask(with: urlRequest) { data, response, error in
+			guard error == nil else {
+				completion(nil, .other)
+				return
+			}
+			guard let data = data else {
+				completion(nil, .noData)
+				return
+			}
+			guard let httpResponse = ((response) as? HTTPURLResponse), httpResponse.statusCode == 201 else {
+				let statusCode = (response as? HTTPURLResponse)?.statusCode
+				completion(nil, .errorCode(statusCode))
+				return
+			}
+			let jsonDecoder = JSONDecoder()
+			jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+			guard let predictionResponse = try? jsonDecoder.decode(Prediction.self, from: data) else {
+				completion(nil, .decoding)
+				return
+			}
+			print(String(data: data, encoding: .utf8)!)
+			//print(predictionResponse.status)
+			completion(predictionResponse, nil)
+		}
+		task.resume()
 	}
 	
 	func refetchPrediction(id: String) {
 		<#code#>
 	}
 	
-	
+}
+
+
+extension ReplicateRemDatSourImp {
+
+	func getSessionPrediction(prompt: String) -> URLRequest? {
+		guard let url = URL(string: server) else {
+			print("error: invalid url")
+			return nil
+		}
+		var request = URLRequest(url: url)
+		let params = "{\"version\": \"\(modelVersion)\",\"input\": {\"prompt\": \"\(prompt)\"}}"
+		let body = params.data(using: .utf8)
+		
+		request.httpMethod = "POST"
+		request.addValue("Token \(token)", forHTTPHeaderField: "Authorization")
+		request.addValue("text/plain", forHTTPHeaderField: "Content-Type")
+		request.httpBody = body
+		return request
+	}
+
 }
