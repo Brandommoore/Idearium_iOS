@@ -64,12 +64,14 @@ extension HomeView {
 				.padding(.bottom, 20)
 				.background(Color("AppBackgroundColor"))
 			Button {
-				NewArtworkView()
+				print("NewArtworkButtonPulsed")
+				//NewArtworkView()
 			} label: {
 				Image(systemName: "plus.square")
 					.resizable()
 					.frame(width: 30, height: 30)
 					.padding(.leading, 40)
+					.padding(.bottom, 5)
 					.foregroundColor(.white)
 			}
 		}
