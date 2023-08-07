@@ -92,6 +92,7 @@ extension DetailView {
 	func returnButton() -> some View {
 		Button{
 			print("Return button pulsed")
+			HomeView()
 		} label: {
 			Image(systemName: "arrowtriangle.left.fill")
 				.resizable()

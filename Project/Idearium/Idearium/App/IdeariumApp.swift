@@ -12,10 +12,10 @@ struct IdeariumApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-			//SplashScreen()
+			SplashScreen()
 			//DetailView()
 			//NewArtworkView()
-			LoadView()
+			//LoadView()
         }
     }
 }

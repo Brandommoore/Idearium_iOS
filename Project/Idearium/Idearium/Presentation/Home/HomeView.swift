@@ -23,13 +23,7 @@ struct HomeView: View {
 		//var windowHeight = UIScreen.main.bounds.size.height
 		
 		VStack(alignment: .leading, spacing: 0) {
-			Image("Idearium_text")
-				.resizable()
-				.frame(width: 163 * 0.75, height: 30 * 0.75)
-				.padding([.leading, .trailing], 35)
-				.padding(.top, 10)
-				.padding(.bottom, 20)
-				.background(bgcol)
+			topBar()
 			NavigationStack {
 				List(ideasMock, id: \.self) { idea in
 					NavigationLink {
@@ -56,6 +50,31 @@ struct HomeView: View {
 		}
 		.background(bgcol)
 	}
+}
+
+extension HomeView {
+	
+	func topBar() -> some View {
+		HStack(spacing: 140) {
+			Image("Idearium_text")
+				.resizable()
+				.frame(width: 163 * 0.75, height: 30 * 0.75)
+				.padding([.leading, .trailing], 35)
+				.padding(.top, 10)
+				.padding(.bottom, 20)
+				.background(Color("AppBackgroundColor"))
+			Button {
+				NewArtworkView()
+			} label: {
+				Image(systemName: "plus.square")
+					.resizable()
+					.frame(width: 30, height: 30)
+					.padding(.leading, 40)
+					.foregroundColor(.white)
+			}
+		}
+	}
+	
 }
 
 struct HomeView_Previews: PreviewProvider {
