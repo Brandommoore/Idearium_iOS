@@ -23,6 +23,8 @@
 		167B1A322A7A435C0036BC0F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 167B1A312A7A435C0036BC0F /* Lottie */; };
 		1684B5582A7AD8F500E79A2A /* ArtworkCardDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B5572A7AD8F500E79A2A /* ArtworkCardDescription.swift */; };
 		1684B55B2A7B0F7B00E79A2A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B55A2A7B0F7B00E79A2A /* DetailView.swift */; };
+		16DAB4D72A80C3C700609036 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4D62A80C3C700609036 /* LoadView.swift */; };
+		16DAB4DA2A80C5A800609036 /* LottieLoadGenAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 16DAB4D92A80C5A800609036 /* LottieLoadGenAnimation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		167B1A232A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeariumUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1684B5572A7AD8F500E79A2A /* ArtworkCardDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCardDescription.swift; sourceTree = "<group>"; };
 		1684B55A2A7B0F7B00E79A2A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		16DAB4D62A80C3C700609036 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
+		16DAB4D92A80C5A800609036 /* LottieLoadGenAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLoadGenAnimation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 		1614339B2A7D2ACA00C8D9EB /* LoadView */ = {
 			isa = PBXGroup;
 			children = (
+				16DAB4D62A80C3C700609036 /* LoadView.swift */,
 			);
 			path = LoadView;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 		1658ABAF2A7AA04E009B2394 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				16DAB4D82A80C59300609036 /* Animations */,
 				1675A5AD2A7AA587000F7868 /* Components */,
 				167B1A0C2A7A433E0036BC0F /* Preview Content */,
 			);
@@ -263,6 +269,14 @@
 				1684B55A2A7B0F7B00E79A2A /* DetailView.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		16DAB4D82A80C59300609036 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				16DAB4D92A80C5A800609036 /* LottieLoadGenAnimation.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DAB4DA2A80C5A800609036 /* LottieLoadGenAnimation.json in Resources */,
 				167B1A0E2A7A433E0036BC0F /* Preview Assets.xcassets in Resources */,
 				167B1A0B2A7A433E0036BC0F /* Assets.xcassets in Resources */,
 			);
@@ -402,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1614339D2A7D2B4400C8D9EB /* NewArtworkView.swift in Sources */,
+				16DAB4D72A80C3C700609036 /* LoadView.swift in Sources */,
 				161433962A7CFA8000C8D9EB /* RootView.swift in Sources */,
 				1658ABB22A7AA0AC009B2394 /* SplashScreen.swift in Sources */,
 				1675A5AC2A7AA41D000F7868 /* HomeView.swift in Sources */,

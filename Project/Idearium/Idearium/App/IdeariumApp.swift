@@ -14,7 +14,8 @@ struct IdeariumApp: App {
             //ContentView()
 			//SplashScreen()
 			//DetailView()
-			NewArtworkView()
+			//NewArtworkView()
+			LoadView()
         }
     }
 }
