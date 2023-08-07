@@ -52,6 +52,6 @@ extension ArtworkCardDescription {
 struct ArtworkCardDescription_Previews: PreviewProvider {
     static var previews: some View {
         ArtworkCardDescription()
-		ArtworkCard(image: Image("astronaut_horse"), prompt: "An astronaut riding a horse on Mars")
+		ArtworkCard(idea: .init(id: "0", systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "astronaut_horse", status: "completed", isFav: false))
     }
 }

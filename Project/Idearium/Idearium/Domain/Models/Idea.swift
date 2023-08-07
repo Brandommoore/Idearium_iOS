@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Idea {
+struct Idea: Hashable, Encodable, Decodable {
 	let id: String
 	let systemId: String
 	let prompt: String

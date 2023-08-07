@@ -12,17 +12,18 @@ struct ArtworkCard: View {
 	// MARK: - States
 
 	// MARK: - Vars
-	private let image: Image
-	private let prompt: String
+	var idea: Idea
+	//private let image: Image
+	//private let prompt: String
 	
-	init(image: Image, prompt: String) {
-		self.image = image
-		self.prompt = prompt
-	}
+//	init(image: Image, prompt: String) {
+//		self.image = image
+//		self.prompt = prompt
+//	}
 	
     var body: some View {
 		ZStack(alignment: .center){
-			imageSquare(image: self.image, prompt: self.prompt)
+			imageSquare(image: Image(idea.image), prompt: idea.prompt)
 		}
 		.frame(width: 370, height: 438)
 		.shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
@@ -61,7 +62,7 @@ extension ArtworkCard {
 
 struct ArtworkCard_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworkCard(image: Image("astronaut_horse"), prompt: "An astronaut riding a horse on Mars")
+		ArtworkCard(idea: .init(id: "0", systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "astronaut_horse", status: "completed", isFav: false))
 		HomeView()
     }
 }

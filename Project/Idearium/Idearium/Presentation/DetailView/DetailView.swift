@@ -12,7 +12,8 @@ struct DetailView: View {
 	// MARK: - States
 	@State var isFav: Bool = false
 	
-	// Vars
+	// MARK: Vars
+	var idea: Idea
 	var windowWidth = UIScreen.main.bounds.size.width
 	
     var body: some View {
@@ -120,6 +121,6 @@ extension DetailView {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+		DetailView(idea: .init(id: "0", systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "astronaut_horse", status: "completed", isFav: false))
     }
 }

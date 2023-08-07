@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct HomeView: View {
-    var body: some View {
+	var body: some View {
+		
+		// MARK: - Mock
+		let ideasMock: [Idea] = [
+			.init(id: "0", systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "astronaut_horse", status: "completed", isFav: false),
+			.init(id: "1", systemId: "7fsh23", prompt: "Queen cat with a gold crown in the head", image: "cat_idea", status: "completed", isFav: false),
+			.init(id: "2", systemId: "9fb273", prompt: "Apainting on canvas of a landscape with some sunflowers and clouds in the background", image: "sunflower_idea", status: "completed", isFav: false)
+		]
 		
 		// MARK: - Vars
 		let bgcol = Color("AppBackgroundColor")
-		var windowWidth = UIScreen.main.bounds.size.width
-		var windowHeight = UIScreen.main.bounds.size.height
+		//var windowWidth = UIScreen.main.bounds.size.width
+		//var windowHeight = UIScreen.main.bounds.size.height
 		
 		VStack(alignment: .leading, spacing: 0) {
 			Image("Idearium_text")
@@ -24,18 +31,23 @@ struct HomeView: View {
 				.padding(.bottom, 20)
 				.background(bgcol)
 			NavigationStack {
-				List {
-					ArtworkCard(image: Image("astronaut_horse"), prompt: "An astronaut riding a horse on Mars")
-					ArtworkCard(image: Image("astronaut_horse"), prompt: "An astronaut riding a horse on Mars")
-					ArtworkCard(image: Image("astronaut_horse"), prompt: "An astronaut riding a horse on Mars")
+				List(ideasMock, id: \.self) { idea in
+					NavigationLink {
+						DetailView(idea: idea)
+					} label: {
+						ArtworkCard(idea: idea)
+					}
+					.padding(.leading, 20)
+					.scrollContentBackground(.hidden)
+					.background(Color("AppBackgroundColor"))
 				}
 				.scrollIndicators(.hidden)
-				.padding([.leading, .trailing], 10)
+				.padding([.leading, .trailing], 9)
 				.padding(.top, -30)
 				.ignoresSafeArea(.all)
-				.listRowSeparatorTint(bgcol)
+				.listRowSeparatorTint(Color("AppBackgroundColor"))
 				.scrollContentBackground(.hidden)
-				.background(bgcol)
+				.background(Color("AppBackgroundColor"))
 			}
 			.ignoresSafeArea(.all)
 			.scrollContentBackground(.hidden)
@@ -47,7 +59,7 @@ struct HomeView: View {
 }
 
 struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
+	static var previews: some View {
+		HomeView()
+	}
 }
