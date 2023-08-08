@@ -18,80 +18,65 @@ enum NetworkError: Error, Equatable {
 class ReplicateRemDatSourImp: ReplicateDataSourceProtocol {
 	
 	// MARK: - Properties
-	private var session: URLSession
 	private let server: String = "https://api.replicate.com/v1/predictions"
 	private let modelVersion = "ac732df83cea7fff18b8472768c88ad041fa750ff7682a21affe81863cbe77e4"
 	private let token: String = Tokens().replicate
+	private var prompt: String = ""
+	//private var prediction: Prediction
 	
-	init(session: URLSession = URLSession.shared) {
-		self.session = session
+	func getPrediction(prompt: String) async throws -> Prediction? {
+		self.prompt = prompt
+		guard let url = getSessionPrediction(prompt: prompt) else {
+			throw NetworkError.malformedUrl
+		}
+		let (data, _) = try await URLSession.shared.data(for: url)
+		let decoder = JSONDecoder()
+		decoder.keyDecodingStrategy = .convertFromSnakeCase
+		guard let predictionResponse = try? decoder.decode(Prediction.self, from: data) else {
+			print("Error decoding response")
+			return nil
+		}
+		let prediction = self.transformResponseToPrediction(predictionResponse: predictionResponse, prompt: prompt)
+		//print(prediction)
+		return prediction
 	}
 	
-	func getPrediction(prompt: String, completion: @escaping (Prediction?, NetworkError?) -> ()) {
-		guard let urlRequest = getSessionPrediction(prompt: prompt) else {
-			completion(nil, .malformedUrl)
-			return
-		}
-		let task = session.dataTask(with: urlRequest) { data, response, error in
-			guard error == nil else {
-				completion(nil, .other)
-				return
-			}
-			guard let data = data else {
-				completion(nil, .noData)
-				return
-			}
-			guard let httpResponse = ((response) as? HTTPURLResponse), httpResponse.statusCode == 201 else {
-				let statusCode = (response as? HTTPURLResponse)?.statusCode
-				completion(nil, .errorCode(statusCode))
-				return
-			}
-			let jsonDecoder = JSONDecoder()
-			jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-			guard let predictionResponse = try? jsonDecoder.decode(Prediction.self, from: data) else {
-				completion(nil, .decoding)
-				return
-			}
-			let prediction = self.transformResponseToPrediction(predictionResponse: predictionResponse, prompt: prompt)
-			print(prediction)
-			completion(prediction, nil)
-		}
-		task.resume()
-	}
-	
-	func refetchPrediction(prediction: Prediction, completion: @escaping (Prediction?, NetworkError?) -> ()) {
+	func refetchPrediction(prediction: Prediction) async throws -> Prediction? {
 		guard let urlRequest = getSessionRefetchPrediction(id: prediction.id!) else {
-			completion(nil, .malformedUrl)
-			return
+			throw NetworkError.malformedUrl
 		}
-		let task = session.dataTask(with: urlRequest) { data, response, error in
-			guard error == nil else {
-				completion(nil, .other)
-				return
-			}
-			guard let data = data else {
-				completion(nil, .noData)
-				return
-			}
-			guard let httpResponse = ((response) as? HTTPURLResponse), httpResponse.statusCode == 200 else {
-				let statusCode = (response as? HTTPURLResponse)?.statusCode
-				completion(nil, .errorCode(statusCode))
-				return
-			}
-			let jsonDecoder = JSONDecoder()
-			jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-			guard let predictionResponse = try? jsonDecoder.decode(Prediction.self, from: data) else {
-				completion(nil, .decoding)
-				return
-			}
-			let finalPrediction = self.getFinalPrediction(predictionResponse: predictionResponse, prediction: prediction)
-			print(finalPrediction)
-			completion(finalPrediction, nil)
+		let (data, _) = try await URLSession.shared.data(for: urlRequest)
+		let decoder = JSONDecoder()
+		decoder.keyDecodingStrategy = .convertFromSnakeCase
+		guard let predictionResponse = try? decoder.decode(Prediction.self, from: data) else {
+			print("Error decoding response")
+			return nil
 		}
-		task.resume()
+		let finalPrediction = self.getFinalPrediction(predictionResponse: predictionResponse, prediction: prediction)
+		//print("Final prediction is \(finalPrediction)")
+		return finalPrediction
+	}
+		
+	func getFinalPrediction(prompt: String) async throws -> Prediction? {
+		let prediction: Prediction? = try? await getPrediction(prompt: prompt)
+		var refecthPrediction: Prediction?
+		var queue: Int = 0
+		if prediction == nil {
+			return nil
+		}
+		if prediction?.status! == "starting" {
+			//try await Task.sleep(nanoseconds: 5_000_000_000)
+			refecthPrediction = try? await refetchPrediction(prediction: prediction!)
+			while (refecthPrediction?.status! != "succeeded" || queue < 2) {
+				try await Task.sleep(nanoseconds: 5_000_000_000)
+				refecthPrediction = try? await refetchPrediction(prediction: prediction!)
+				queue = queue + 1
+			}
+		}
+		//print("\t\tFinal with output: \(String(describing: refecthPrediction))")
+		return refecthPrediction
 	}
 }
-
 
 extension ReplicateRemDatSourImp {
 
@@ -112,15 +97,19 @@ extension ReplicateRemDatSourImp {
 	}
 	
 	func getSessionRefetchPrediction(id: String) -> URLRequest? {
-		guard let url = URL(string: "\(server)/\(id) ") else {
+		print("\(server)/\(id)")
+		guard let url = URL(string: "\(server)/\(id)") else {
 			print("error: invalid url")
 			return nil
 		}
 		var request = URLRequest(url: url)
+		let params = "{\"version\": \"\(modelVersion)\",\"input\": {\"prompt\": \"\(prompt)\"}}"
+		let body = params.data(using: .utf8)
 		
 		request.httpMethod = "POST"
 		request.addValue("Token \(token)", forHTTPHeaderField: "Authorization")
 		request.addValue("text/plain", forHTTPHeaderField: "Content-Type")
+		request.httpBody = body
 		return request
 	}
 	
@@ -143,5 +132,4 @@ extension ReplicateRemDatSourImp {
 		return finalPrediction
 	}
 	
-
 }

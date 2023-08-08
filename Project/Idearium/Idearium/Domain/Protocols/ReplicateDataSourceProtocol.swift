@@ -8,6 +8,6 @@
 import Foundation
 
 protocol ReplicateDataSourceProtocol {
-	func getPrediction(prompt: String, completion: @escaping (Prediction?, NetworkError?) -> ())
-	func refetchPrediction(prediction: Prediction, completion: @escaping (Prediction?, NetworkError?) -> ())
+	func getPrediction(prompt: String) async throws -> Prediction?
+	func refetchPrediction(prediction: Prediction) async throws -> Prediction?
 }

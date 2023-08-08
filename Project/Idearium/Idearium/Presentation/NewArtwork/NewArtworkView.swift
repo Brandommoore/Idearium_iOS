@@ -14,6 +14,7 @@ struct NewArtworkView: View {
 	@State private var action = ""
 	@State private var place = ""
 	@State private var imageStyle = ""
+	@EnvironmentObject var newArtworkViewModel: NewArtworkViewModel
 	
 	// MARK: - Vars
 	let filedTit: [String] = [
@@ -59,6 +60,7 @@ struct NewArtworkView: View {
 
 extension NewArtworkView {
 	
+	// Generate the artwork button to start the generation
 	func generateArtworkButton() -> some View {
 		Button {
 			print("Generate Button Pressed")
@@ -108,7 +110,23 @@ extension NewArtworkView {
 		}.frame(width: 362, height: 50)
 	}
 	
+	// On generate artwork button clicked
+	func onClickGenerateButton(charact: String, action: String, place: String, imgStyle: String) {
+		var prompt: String = ""
+		prompt = transformStatesToPrompt(character: charact, action: action, place: place, imageStyle: imgStyle)
+		// Write the function on viewmodel
+	}
+	
+	// Transform the state vars to prompt
+	func transformStatesToPrompt(character: String, action: String, place: String, imageStyle: String) -> String {
+		var promptParser = PromptParser(character: character, action: action, place: place, imageStyle: imageStyle)
+		let prompt = promptParser.parsePrompt()
+		return prompt
+	}
+	
 }
+
+
 
 struct NewArtworkView_Previews: PreviewProvider {
     static var previews: some View {
