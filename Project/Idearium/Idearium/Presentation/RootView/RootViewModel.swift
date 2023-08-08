@@ -10,6 +10,7 @@ import Foundation
 enum Status {
 	case splash
 	case home
+	case newArtwork
 	case loadingHome
 	case loadingPrediction
 	case completed(prediction: Prediction)

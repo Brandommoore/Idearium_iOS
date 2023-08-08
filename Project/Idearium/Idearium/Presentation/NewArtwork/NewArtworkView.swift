@@ -9,6 +9,9 @@ import SwiftUI
 
 struct NewArtworkView: View {
 	
+	// MARK: - Properties
+	@EnvironmentObject var rootViewModel: RootViewModel
+	
 	// MARK: - States
 	@State private var character = ""
 	@State private var action = ""
@@ -34,6 +37,7 @@ struct NewArtworkView: View {
     var body: some View {
 		ZStack(alignment: .center) {
 			VStack(alignment: .center) {
+				returnButtonBar()
 				Text("Let´s create an new ArtWork!!")
 					.font(.largeTitle)
 					.fontWeight(.bold)
@@ -122,6 +126,25 @@ extension NewArtworkView {
 		var promptParser = PromptParser(character: character, action: action, place: place, imageStyle: imageStyle)
 		let prompt = promptParser.parsePrompt()
 		return prompt
+	}
+	
+	// Return button of topNavigationBar
+	func returnButtonBar() -> some View {
+		HStack {
+			Button{
+				print("Return button pulsed")
+				rootViewModel.status = .home
+			} label: {
+				Image(systemName: "arrowtriangle.left.fill")
+					.resizable()
+					.frame(width: 25, height: 25)
+					.foregroundColor(.white)
+					.padding(.top, 70) 	// This is the top margin of all button bar
+					.padding(.leading, 30)
+			}
+			Spacer()
+		}
+		.padding(.bottom, -25)
 	}
 	
 }

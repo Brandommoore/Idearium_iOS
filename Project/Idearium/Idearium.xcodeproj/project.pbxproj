@@ -34,6 +34,7 @@
 		16DAB4EE2A81231500609036 /* PromptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4ED2A81231500609036 /* PromptParser.swift */; };
 		16DAB4F12A8224C300609036 /* ReplicateRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4F02A8224C300609036 /* ReplicateRepositoryImpl.swift */; };
 		16DAB4F32A8224E200609036 /* ReplicateRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4F22A8224E200609036 /* ReplicateRepositoryProtocol.swift */; };
+		16DAB4F52A8269AE00609036 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4F42A8269AE00609036 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		16DAB4ED2A81231500609036 /* PromptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptParser.swift; sourceTree = "<group>"; };
 		16DAB4F02A8224C300609036 /* ReplicateRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRepositoryImpl.swift; sourceTree = "<group>"; };
 		16DAB4F22A8224E200609036 /* ReplicateRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRepositoryProtocol.swift; sourceTree = "<group>"; };
+		16DAB4F42A8269AE00609036 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				161433992A7D273000C8D9EB /* Components */,
 				1675A5AB2A7AA41D000F7868 /* HomeView.swift */,
+				16DAB4F42A8269AE00609036 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				1675A5AF2A7AA75F000F7868 /* ArtworkCard.swift in Sources */,
 				16DAB4E82A80CC0200609036 /* Tokens.swift in Sources */,
 				16DAB4E32A80CBBE00609036 /* ReplicateRemDatSourImp.swift in Sources */,
+				16DAB4F52A8269AE00609036 /* HomeViewModel.swift in Sources */,
 				161433982A7CFA8C00C8D9EB /* RootViewModel.swift in Sources */,
 				16DAB4F12A8224C300609036 /* ReplicateRepositoryImpl.swift in Sources */,
 				16DAB4E02A80CB4D00609036 /* Prediction.swift in Sources */,

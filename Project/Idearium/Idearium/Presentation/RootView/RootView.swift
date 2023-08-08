@@ -22,6 +22,8 @@ struct RootView: View {
 			LoadView()
 		case .loadingPrediction:
 			LoadView()
+		case .newArtwork:
+			NewArtworkView()
 		case .completed(prediction: let prediction):
 			//DetailView(idea: Idea)
 			LoadView()

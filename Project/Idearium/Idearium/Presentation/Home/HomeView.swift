@@ -8,19 +8,28 @@
 import SwiftUI
 
 struct HomeView: View {
+	
+	// MARK: - Properties
+	@EnvironmentObject var rootViewModel: RootViewModel
+	//@ObservedObject var homeViewModel: HomeViewModel
+	
+//	init(homeViewModel: HomeViewModel) {
+//		self.homeViewModel
+//	}
+	
+	// MARK: - Mock
+	let ideasMock: [Idea] = [
+		.init(id: "0", systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "astronaut_horse", status: "completed", isFav: false),
+		.init(id: "1", systemId: "7fsh23", prompt: "Queen cat with a gold crown in the head", image: "cat_idea", status: "completed", isFav: false),
+		.init(id: "2", systemId: "9fb273", prompt: "Apainting on canvas of a landscape with some sunflowers and clouds in the background", image: "sunflower_idea", status: "completed", isFav: false)
+	]
+	
+	// MARK: - Vars
+	let bgcol = Color("AppBackgroundColor")
+	//var windowWidth = UIScreen.main.bounds.size.width
+	//var windowHeight = UIScreen.main.bounds.size.height
+	
 	var body: some View {
-		
-		// MARK: - Mock
-		let ideasMock: [Idea] = [
-			.init(id: "0", systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "astronaut_horse", status: "completed", isFav: false),
-			.init(id: "1", systemId: "7fsh23", prompt: "Queen cat with a gold crown in the head", image: "cat_idea", status: "completed", isFav: false),
-			.init(id: "2", systemId: "9fb273", prompt: "Apainting on canvas of a landscape with some sunflowers and clouds in the background", image: "sunflower_idea", status: "completed", isFav: false)
-		]
-		
-		// MARK: - Vars
-		let bgcol = Color("AppBackgroundColor")
-		//var windowWidth = UIScreen.main.bounds.size.width
-		//var windowHeight = UIScreen.main.bounds.size.height
 		
 		VStack(alignment: .leading, spacing: 0) {
 			topBar()
@@ -65,7 +74,8 @@ extension HomeView {
 				.background(Color("AppBackgroundColor"))
 			Button {
 				print("NewArtworkButtonPulsed")
-				NewArtworkView()
+				rootViewModel.status = .newArtwork
+				//onNewArtworkButtonPulsed()
 			} label: {
 				Image(systemName: "plus.square")
 					.resizable()
@@ -76,6 +86,14 @@ extension HomeView {
 			}
 		}
 	}
+	
+	// -------------------------------------------
+	// Button actions
+	// -------------------------------------------
+	
+//	func onNewArtworkButtonPulsed() {
+//		rootViewModel.status = .newArtwork
+//	}
 	
 }
 
