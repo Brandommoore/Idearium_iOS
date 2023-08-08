@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+enum Status {
+	case splash
+	case home
+	case loadingHome
+	case loadingPrediction
+	case completed(prediction: Prediction)
+}
+
+final class RootViewModel: ObservableObject {
+	
+	//MARK: - Properties
+	@Published var status = Status.splash
+	
+}

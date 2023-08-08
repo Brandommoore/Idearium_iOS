@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct RootView: View {
+	
+	//MARK: - Properties
+	@EnvironmentObject var rootViewModel: RootViewModel
+		
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		switch (rootViewModel.status) {
+		case .splash:
+			SplashScreen()
+		case .home:
+			HomeView()
+		case .loadingHome:
+			LoadView()
+		case .loadingPrediction:
+			LoadView()
+		case .completed(prediction: let prediction):
+			//DetailView(idea: Idea)
+			LoadView()
+		}
     }
 }
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
+			.environmentObject(RootViewModel())
     }
 }

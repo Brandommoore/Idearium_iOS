@@ -10,6 +10,7 @@ import SwiftUI
 struct SplashScreen: View {
 	
 	// MARK: - States
+	@EnvironmentObject var rootViewModel: RootViewModel
 	@State var isActive: Bool = false
 	
     var body: some View {
@@ -29,6 +30,7 @@ struct SplashScreen: View {
 			.onAppear {
 				DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
 					withAnimation { self.isActive = true }
+					rootViewModel.status = .home
 				}
 			}
 		}

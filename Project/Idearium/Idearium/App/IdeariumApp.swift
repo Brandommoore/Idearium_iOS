@@ -11,11 +11,8 @@ import SwiftUI
 struct IdeariumApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-			SplashScreen()
-			//DetailView()
-			//NewArtworkView()
-			//LoadView()
+            RootView()
+				.environmentObject(RootViewModel())
         }
     }
 }
