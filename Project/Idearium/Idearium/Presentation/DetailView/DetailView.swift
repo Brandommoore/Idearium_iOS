@@ -18,11 +18,11 @@ struct DetailView: View {
 	
     var body: some View {
 		VStack(alignment: .leading) {
-			imageDetailView(image: Image("astronaut_horse"))
+			imageDetailView(image: Image(idea.image))
 			Spacer().frame(height: 30)
 			VStack(alignment: .leading, spacing: 20){
-				textLabelComponent(title: "ID", description: "f6320fdv2v0fd2837vf")
-				textLabelComponent(title: "PROMT", description: "An astronaut riding a white horse in mars, whit a realistic style", promptType: true)
+				textLabelComponent(title: "ID", description: idea.id)
+				textLabelComponent(title: "PROMT", description: idea.prompt, promptType: true)
 			}
 			.multilineTextAlignment(.leading)
 			.padding(.leading)

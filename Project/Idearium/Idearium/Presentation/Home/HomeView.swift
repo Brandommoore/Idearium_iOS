@@ -26,8 +26,6 @@ struct HomeView: View {
 	
 	// MARK: - Vars
 	let bgcol = Color("AppBackgroundColor")
-	//var windowWidth = UIScreen.main.bounds.size.width
-	//var windowHeight = UIScreen.main.bounds.size.height
 	
 	var body: some View {
 		
@@ -75,7 +73,6 @@ extension HomeView {
 			Button {
 				print("NewArtworkButtonPulsed")
 				rootViewModel.status = .newArtwork
-				//onNewArtworkButtonPulsed()
 			} label: {
 				Image(systemName: "plus.square")
 					.resizable()
@@ -86,15 +83,6 @@ extension HomeView {
 			}
 		}
 	}
-	
-	// -------------------------------------------
-	// Button actions
-	// -------------------------------------------
-	
-//	func onNewArtworkButtonPulsed() {
-//		rootViewModel.status = .newArtwork
-//	}
-	
 }
 
 struct HomeView_Previews: PreviewProvider {
