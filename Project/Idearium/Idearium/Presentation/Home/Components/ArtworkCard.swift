@@ -23,7 +23,8 @@ struct ArtworkCard: View {
 	
     var body: some View {
 		ZStack(alignment: .center){
-			imageSquare(image: Image(idea.image), prompt: idea.prompt)
+			imageSquare(image: Image(idea.image ?? "xmark.rectangle.fill"),
+						prompt: idea.prompt ?? "nill")
 		}
 		.frame(width: 370, height: 438)
 		.shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)

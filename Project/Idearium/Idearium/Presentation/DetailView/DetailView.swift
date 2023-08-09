@@ -18,11 +18,11 @@ struct DetailView: View {
 	
     var body: some View {
 		VStack(alignment: .leading) {
-			imageDetailView(image: Image(idea.image))
+			imageDetailView(image: Image(idea.image ?? "xmark.rectangle.fill"))
 			Spacer().frame(height: 30)
 			VStack(alignment: .leading, spacing: 20){
-				textLabelComponent(title: "ID", description: idea.id)
-				textLabelComponent(title: "PROMT", description: idea.prompt, promptType: true)
+				textLabelComponent(title: "ID", description: idea.systemId ?? "nill")
+				textLabelComponent(title: "PROMT", description: idea.prompt ?? "nill", promptType: true)
 			}
 			.multilineTextAlignment(.leading)
 			.padding(.leading)
@@ -92,7 +92,7 @@ extension DetailView {
 	func returnButton() -> some View {
 		Button{
 			print("Return button pulsed")
-			HomeView()
+			//HomeView()
 		} label: {
 			Image(systemName: "arrowtriangle.left.fill")
 				.resizable()
@@ -111,6 +111,7 @@ extension DetailView {
 			print("Fav button tapped")
 			print("FavButtoState --> \(isFav)")
 			isFav.toggle()
+//			changueFavStatus(isFav: isFav)
 		} label: {
 			Image(systemName: isFav ? "heart.fill" : "heart")
 				.resizable()
@@ -118,6 +119,10 @@ extension DetailView {
 				.foregroundColor(isFav ? (.red) : Color(.white))
 		}
 	}
+	
+//	func changueFavStatus(isFav: Bool) {
+//		idea.isFav = isFav
+//	}
 }
 
 struct DetailView_Previews: PreviewProvider {
