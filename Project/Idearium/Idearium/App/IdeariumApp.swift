@@ -10,9 +10,14 @@ import SwiftUI
 @main
 struct IdeariumApp: App {
     var body: some Scene {
+		//remote data source
+		// repository
         WindowGroup {
+			let replicateDataSource = ReplicateRemDatSourImp()
+			let replicateRepository = ReplicateRepositoryImp(replicateDataSource: replicateDataSource)
             RootView()
-				.environmentObject(RootViewModel())
+				.environmentObject(RootViewModel(repository: replicateRepository))
+			//LoadView()
         }
     }
 }

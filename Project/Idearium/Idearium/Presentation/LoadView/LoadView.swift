@@ -14,6 +14,7 @@ struct LoadView: View {
 			LottieView(loopMode: .loop)
 		}
 		.background(Color("AppBackgroundColor"))
+		.preferredColorScheme(.dark)
     }
 }
 

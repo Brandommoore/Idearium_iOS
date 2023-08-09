@@ -110,8 +110,8 @@ extension DetailView {
 		return Button {
 			print("Fav button tapped")
 			print("FavButtoState --> \(isFav)")
-			isFav.toggle()
-//			changueFavStatus(isFav: isFav)
+			//isFav.toggle()
+//			changueFavStatus(isFav: isFav!)
 		} label: {
 			Image(systemName: isFav ? "heart.fill" : "heart")
 				.resizable()

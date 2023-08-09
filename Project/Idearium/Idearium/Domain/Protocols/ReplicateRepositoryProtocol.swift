@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ReplicateRepositoryProtocol {
-	func getPrediction(prompt: String, completion: @escaping (Prediction?, NetworkError?) -> ())
+	func createIdea(prompt: String, completion: @escaping (Idea) -> ()) async throws
 }

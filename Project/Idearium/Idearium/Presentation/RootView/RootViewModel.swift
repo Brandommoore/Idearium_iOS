@@ -13,12 +13,17 @@ enum Status {
 	case newArtwork
 	case loadingHome
 	case loadingPrediction
-	case completed(prediction: Prediction)
+	case detail(idea: Idea)
 }
 
 final class RootViewModel: ObservableObject {
 	
 	//MARK: - Properties
 	@Published var status = Status.splash
+	let repository: ReplicateRepositoryImp
+	
+	init(repository: ReplicateRepositoryImp) {
+		self.repository = repository
+	}
 	
 }

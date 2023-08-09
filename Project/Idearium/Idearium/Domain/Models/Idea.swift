@@ -8,10 +8,10 @@
 import Foundation
 
 struct Idea: Hashable, Encodable, Decodable {
-	let id: String?
-	let systemId: String?
-	let prompt: String?
-	let image: String?
-	let status: String?
+	var id: String?
+	var systemId: String?
+	var prompt: String?
+	var image: String?
+	var status: String?
 	var isFav: Bool?
 }

@@ -73,7 +73,7 @@ class ReplicateRemDatSourImp: ReplicateDataSourceProtocol {
 				queue = queue + 1
 			}
 		}
-		//print("\t\tFinal with output: \(String(describing: refecthPrediction))")
+		print("\t\tFinal with output: \(String(describing: refecthPrediction))")
 		return refecthPrediction
 	}
 }
@@ -133,3 +133,4 @@ extension ReplicateRemDatSourImp {
 	}
 	
 }
+

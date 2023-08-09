@@ -17,7 +17,7 @@ struct NewArtworkView: View {
 	@State private var action = ""
 	@State private var place = ""
 	@State private var imageStyle = ""
-	@EnvironmentObject var newArtworkViewModel: NewArtworkViewModel
+	@ObservedObject var newArtworkViewModel: NewArtworkViewModel
 	
 	// MARK: - Vars
 	let filedTit: [String] = [
@@ -71,6 +71,9 @@ extension NewArtworkView {
 			print("Form Data:\n\tcharacter: \(character)")
 			print("\taction: \(action)\n\tplace: \(place)")
 			print("\timageStyle: \(imageStyle)")
+			Task {
+				try await onClickGenerateButton(charact: character, action: action, place: place, imgStyle: imageStyle)
+			}
 		} label: {
 			ZStack(alignment: .center) {
 				Rectangle()
@@ -115,10 +118,15 @@ extension NewArtworkView {
 	}
 	
 	// On generate artwork button clicked
-	func onClickGenerateButton(charact: String, action: String, place: String, imgStyle: String) {
+	func onClickGenerateButton(charact: String, action: String, place: String, imgStyle: String) async {
 		var prompt: String = ""
 		prompt = transformStatesToPrompt(character: charact, action: action, place: place, imageStyle: imgStyle)
-		// Write the function on viewmodel
+		rootViewModel.status = .loadingPrediction
+		Task {
+			try await newArtworkViewModel.onNewArtworkButtonPulsed(prompt: prompt) { idea in
+				rootViewModel.status = .detail(idea: idea)
+			}
+		}
 	}
 	
 	// Transform the state vars to prompt
@@ -153,6 +161,8 @@ extension NewArtworkView {
 
 struct NewArtworkView_Previews: PreviewProvider {
     static var previews: some View {
-        NewArtworkView()
+		let replicateDataSource = ReplicateRemDatSourImp()
+		let replicateRepository = ReplicateRepositoryImp(replicateDataSource: replicateDataSource)
+		NewArtworkView(newArtworkViewModel: NewArtworkViewModel(replicateRepository: replicateRepository))
     }
 }

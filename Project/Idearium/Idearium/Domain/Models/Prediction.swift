@@ -10,6 +10,6 @@ import Foundation
 struct Prediction: Decodable {
 	let id: String?
 	let inputPrompt: String?
-	let output: String?
+	let output: [String]?
 	let status: String?
 }

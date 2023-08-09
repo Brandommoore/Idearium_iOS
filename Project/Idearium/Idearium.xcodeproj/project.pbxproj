@@ -32,12 +32,14 @@
 		16DAB4E82A80CC0200609036 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4E72A80CC0200609036 /* Tokens.swift */; };
 		16DAB4EB2A81230600609036 /* NewArtworkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4EA2A81230600609036 /* NewArtworkViewModel.swift */; };
 		16DAB4EE2A81231500609036 /* PromptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4ED2A81231500609036 /* PromptParser.swift */; };
-		16DAB4F12A8224C300609036 /* ReplicateRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4F02A8224C300609036 /* ReplicateRepositoryImpl.swift */; };
 		16DAB4F32A8224E200609036 /* ReplicateRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4F22A8224E200609036 /* ReplicateRepositoryProtocol.swift */; };
 		16DAB4F52A8269AE00609036 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4F42A8269AE00609036 /* HomeViewModel.swift */; };
 		16DAB4F72A82740200609036 /* BridgeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4F62A82740200609036 /* BridgeModels.swift */; };
 		16DAB4FA2A836AA400609036 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 16DAB4F92A836AA400609036 /* Realm */; };
 		16DAB4FC2A836AA400609036 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 16DAB4FB2A836AA400609036 /* RealmSwift */; };
+		16DAB4FF2A83782900609036 /* RealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4FE2A83782900609036 /* RealmDB.swift */; };
+		16DAB5022A838A3200609036 /* ReplicateRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB5012A838A3200609036 /* ReplicateRepositoryImp.swift */; };
+		16DAB5052A8397F800609036 /* DeatilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB5042A8397F800609036 /* DeatilViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,10 +87,12 @@
 		16DAB4E72A80CC0200609036 /* Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
 		16DAB4EA2A81230600609036 /* NewArtworkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArtworkViewModel.swift; sourceTree = "<group>"; };
 		16DAB4ED2A81231500609036 /* PromptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptParser.swift; sourceTree = "<group>"; };
-		16DAB4F02A8224C300609036 /* ReplicateRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRepositoryImpl.swift; sourceTree = "<group>"; };
 		16DAB4F22A8224E200609036 /* ReplicateRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRepositoryProtocol.swift; sourceTree = "<group>"; };
 		16DAB4F42A8269AE00609036 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		16DAB4F62A82740200609036 /* BridgeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeModels.swift; sourceTree = "<group>"; };
+		16DAB4FE2A83782900609036 /* RealmDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDB.swift; sourceTree = "<group>"; };
+		16DAB5012A838A3200609036 /* ReplicateRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRepositoryImp.swift; sourceTree = "<group>"; };
+		16DAB5042A8397F800609036 /* DeatilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeatilViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 		1658ABAA2A7A9FA8009B2394 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				16DAB4FD2A83781800609036 /* RealmDB */,
 				16DAB4E12A80CB9900609036 /* Remote */,
 				16DAB4E72A80CC0200609036 /* Tokens.swift */,
 			);
@@ -300,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				1684B55A2A7B0F7B00E79A2A /* DetailView.swift */,
+				16DAB5042A8397F800609036 /* DeatilViewModel.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -351,9 +357,17 @@
 		16DAB4EF2A8221E200609036 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				16DAB4F02A8224C300609036 /* ReplicateRepositoryImpl.swift */,
+				16DAB5012A838A3200609036 /* ReplicateRepositoryImp.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		16DAB4FD2A83781800609036 /* RealmDB */ = {
+			isa = PBXGroup;
+			children = (
+				16DAB4FE2A83782900609036 /* RealmDB.swift */,
+			);
+			path = RealmDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,6 +515,8 @@
 				1614339D2A7D2B4400C8D9EB /* NewArtworkView.swift in Sources */,
 				16DAB4D72A80C3C700609036 /* LoadView.swift in Sources */,
 				161433962A7CFA8000C8D9EB /* RootView.swift in Sources */,
+				16DAB4FF2A83782900609036 /* RealmDB.swift in Sources */,
+				16DAB5022A838A3200609036 /* ReplicateRepositoryImp.swift in Sources */,
 				1658ABB22A7AA0AC009B2394 /* SplashScreen.swift in Sources */,
 				1675A5AC2A7AA41D000F7868 /* HomeView.swift in Sources */,
 				167B1A092A7A433D0036BC0F /* ContentView.swift in Sources */,
@@ -515,9 +531,9 @@
 				16DAB4E32A80CBBE00609036 /* ReplicateRemDatSourImp.swift in Sources */,
 				16DAB4F52A8269AE00609036 /* HomeViewModel.swift in Sources */,
 				161433982A7CFA8C00C8D9EB /* RootViewModel.swift in Sources */,
-				16DAB4F12A8224C300609036 /* ReplicateRepositoryImpl.swift in Sources */,
 				16DAB4E02A80CB4D00609036 /* Prediction.swift in Sources */,
 				167B1A072A7A433D0036BC0F /* IdeariumApp.swift in Sources */,
+				16DAB5052A8397F800609036 /* DeatilViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
