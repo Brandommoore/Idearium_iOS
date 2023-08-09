@@ -26,7 +26,7 @@ struct ArtworkCard: View {
 			imageSquare(image: Image(idea.image ?? "xmark.rectangle.fill"),
 						prompt: idea.prompt ?? "nill")
 		}
-		.frame(width: 370, height: 438)
+		.frame(width: 338, height: 348)
 		.shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
 		.background(Color("AppBackgroundColor"))
 		.padding(-19)
@@ -40,7 +40,7 @@ extension ArtworkCard {
 	func imageSquare(image: Image, prompt: String) -> some View {
 		Rectangle()
 			.foregroundColor(.clear)
-			.frame(width: 370, height: 380)
+			.frame(width: 338, height: 340)
 			.background(
 				AsyncImage(url: getUrlFromString(imageURLString: idea.image!),
 						   content: { image in
@@ -60,7 +60,7 @@ extension ArtworkCard {
 			)
 			.overlay(
 				ArtworkCardDescription(prompt: prompt)
-					.position(.init(x: 370/2, y: 348))
+					.position(.init(x: 338/2, y: 308))
 			)
 	}
 	

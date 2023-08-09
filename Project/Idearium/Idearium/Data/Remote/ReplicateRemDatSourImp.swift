@@ -67,8 +67,8 @@ class ReplicateRemDatSourImp: ReplicateDataSourceProtocol {
 		if prediction?.status! == "starting" {
 			//try await Task.sleep(nanoseconds: 5_000_000_000)
 			refecthPrediction = try? await refetchPrediction(prediction: prediction!)
-			while (refecthPrediction?.status! != "succeeded" || queue < 2) {
-				try await Task.sleep(nanoseconds: 5_000_000_000)
+			while (refecthPrediction?.status! != "succeeded" || queue < 3) {
+				try await Task.sleep(nanoseconds: 3_000_000_000)
 				refecthPrediction = try? await refetchPrediction(prediction: prediction!)
 				queue = queue + 1
 			}

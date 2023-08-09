@@ -38,20 +38,22 @@ struct NewArtworkView: View {
 		ZStack(alignment: .center) {
 			VStack(alignment: .center) {
 				returnButtonBar()
-				Text("Let´s create an new ArtWork!!")
-					.font(.largeTitle)
-					.fontWeight(.bold)
+				Text("Let´s create a\n new ArtWork!!")
+					.font(.title)
+					.fontWeight(.black)
+					.lineLimit(2)
 					.fontWidth(.expanded)
 					.multilineTextAlignment(.center)
 					.padding(.top, 50)
-					.padding(.bottom, 90)
+					.padding(.bottom, 50)
+					.frame(width: 310)
 				VStack(alignment: .center, spacing: 70) {
 					generateTextField(title: filedTit[0], placeholder: placeholders[0], stateVar: $character)
 					generateTextField(title: filedTit[1], placeholder: placeholders[1], stateVar: $action)
 					generateTextField(title: filedTit[2], placeholder: placeholders[2], stateVar: $place)
 					generateTextField(title: filedTit[3], placeholder: placeholders[3], stateVar: $imageStyle)
 				}
-				Spacer().frame(height: 110)
+				Spacer().frame(height: 80)
 				generateArtworkButton()
 			}
 		}
@@ -78,7 +80,7 @@ extension NewArtworkView {
 			ZStack(alignment: .center) {
 				Rectangle()
 					.foregroundColor(.clear)
-					.frame(width: 350, height: 56)
+					.frame(width: 290, height: 56)
 					.background(Color(.black))
 					.cornerRadius(15)
 					.overlay(
@@ -91,7 +93,7 @@ extension NewArtworkView {
 					.fontWidth(.init(CGFloat(30)))
 					.foregroundColor(.white)
 			}
-			.frame(width: 350, height: 56)
+			.frame(width: 240, height: 56)
 		}
 	}
 	
@@ -104,7 +106,7 @@ extension NewArtworkView {
 			ZStack(alignment: .center) {
 				Rectangle()
 					.foregroundColor(.clear)
-					.frame(width: 362, height: 50)
+					.frame(width: 332, height: 50)
 					.background(Color(red: 0.04, green: 0.04, blue: 0.04))
 					.overlay(
 						Rectangle()
@@ -114,7 +116,7 @@ extension NewArtworkView {
 				TextField(placeholder, text: stateVar)
 					.padding([.leading, .trailing], 15)
 			}.frame(maxWidth: .infinity, maxHeight: .infinity)
-		}.frame(width: 362, height: 50)
+		}.frame(width: 332, height: 50)
 	}
 	
 	// On generate artwork button clicked

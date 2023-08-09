@@ -11,6 +11,8 @@ struct HomeView: View {
 	
 	// MARK: - Properties
 	@EnvironmentObject var rootViewModel: RootViewModel
+	var windowWidth = UIScreen.main.bounds.size.width
+	var windowHeight = UIScreen.main.bounds.size.height
 	//@ObservedObject var homeViewModel: HomeViewModel
 	
 //	init(homeViewModel: HomeViewModel) {
@@ -39,12 +41,14 @@ struct HomeView: View {
 						ArtworkCard(idea: idea)
 					}
 					.padding(.leading, 20)
+					.padding(.bottom, 20)
+					.padding(.top, 10)
 					.scrollContentBackground(.hidden)
 					.background(Color("AppBackgroundColor"))
 				}
 				.scrollIndicators(.hidden)
 				.padding([.leading, .trailing], 9)
-				.padding(.top, -30)
+				.padding(.top, -20)
 				.ignoresSafeArea(.all)
 				.listRowSeparatorTint(Color("AppBackgroundColor"))
 				.scrollContentBackground(.hidden)
@@ -62,14 +66,15 @@ struct HomeView: View {
 extension HomeView {
 	
 	func topBar() -> some View {
-		HStack(spacing: 140) {
+		HStack(spacing: 0) {
 			Image("Idearium_text")
 				.resizable()
 				.frame(width: 163 * 0.75, height: 30 * 0.75)
 				.padding([.leading, .trailing], 35)
-				.padding(.top, 10)
-				.padding(.bottom, 20)
+				.padding(.top, 20)
+				.padding(.bottom, 30)
 				.background(Color("AppBackgroundColor"))
+			Spacer()
 			Button {
 				print("NewArtworkButtonPulsed")
 				rootViewModel.status = .newArtwork
@@ -77,7 +82,8 @@ extension HomeView {
 				Image(systemName: "plus.square")
 					.resizable()
 					.frame(width: 30, height: 30)
-					.padding(.leading, 40)
+					.padding(.leading, 0)
+					.padding(.trailing, 30)
 					.padding(.bottom, 5)
 					.foregroundColor(.white)
 			}

@@ -21,7 +21,7 @@ struct ArtworkCardDescription: View {
 			Text(prompt)
 				.multilineTextAlignment(.leading)
 				//.frame(width: 260)
-				.frame(maxWidth: 260, alignment: .leading)
+				.frame(maxWidth: 227, alignment: .leading)
 				.background(Color("red"))
 			Divider().frame(width: 20, height: 0)
 			//Spacer().frame(width: 10)
