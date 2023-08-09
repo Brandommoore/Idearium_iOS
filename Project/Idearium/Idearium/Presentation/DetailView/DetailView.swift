@@ -11,6 +11,7 @@ struct DetailView: View {
 	
 	// MARK: - States
 	@State var isFav: Bool = false
+	@EnvironmentObject var rootViewModel: RootViewModel
 	
 	// MARK: Vars
 	var idea: Idea
@@ -18,7 +19,7 @@ struct DetailView: View {
 	
     var body: some View {
 		VStack(alignment: .leading) {
-			imageDetailView(image: Image(idea.image ?? "xmark.rectangle.fill"))
+			imageDetailView(image: idea.image!)
 			Spacer().frame(height: 30)
 			VStack(alignment: .leading, spacing: 20){
 				textLabelComponent(title: "ID", description: idea.systemId ?? "nill")
@@ -39,13 +40,17 @@ struct DetailView: View {
 extension DetailView {
 	
 	// Main image component of detail view
-	func imageDetailView(image: Image) -> some View {
+	func imageDetailView(image: String) -> some View {
 		ZStack(alignment: .top) {
 			// Image component
 			VStack(alignment: .leading){
-				image
-					.resizable()
-					.scaledToFill()
+				AsyncImage(url: getUrlFromString(imageURLString: image),
+						   content: { image in
+					image.resizable()
+						.aspectRatio(contentMode: .fill)
+				}, placeholder: {
+					LoadView()
+				})
 			}
 			ZStack {
 				// NavigationBar
@@ -92,6 +97,7 @@ extension DetailView {
 	func returnButton() -> some View {
 		Button{
 			print("Return button pulsed")
+			rootViewModel.status = .home
 			//HomeView()
 		} label: {
 			Image(systemName: "arrowtriangle.left.fill")
@@ -110,7 +116,7 @@ extension DetailView {
 		return Button {
 			print("Fav button tapped")
 			print("FavButtoState --> \(isFav)")
-			//isFav.toggle()
+			isFav.toggle()
 //			changueFavStatus(isFav: isFav!)
 		} label: {
 			Image(systemName: isFav ? "heart.fill" : "heart")
@@ -120,9 +126,12 @@ extension DetailView {
 		}
 	}
 	
-//	func changueFavStatus(isFav: Bool) {
-//		idea.isFav = isFav
-//	}
+	func getUrlFromString(imageURLString: String) -> URL? {
+		guard let downImageURL: URL = URL(string: imageURLString) else {
+			return nil
+		}
+		return downImageURL
+	}
 }
 
 struct DetailView_Previews: PreviewProvider {

@@ -19,7 +19,7 @@ struct HomeView: View {
 	
 	// MARK: - Mock
 	let ideasMock: [Idea] = [
-		.init(id: "0", systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "astronaut_horse", status: "completed", isFav: false),
+		.init(id: "0", systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "https://replicate.delivery/pbxt/sWeZFZou6v3CPKuoJbqX46ugPaHT1DcsWYx0srPmGrMOCPYIA/out-0.png", status: "completed", isFav: false),
 		.init(id: "1", systemId: "7fsh23", prompt: "Queen cat with a gold crown in the head", image: "cat_idea", status: "completed", isFav: false),
 		.init(id: "2", systemId: "9fb273", prompt: "Apainting on canvas of a landscape with some sunflowers and clouds in the background", image: "sunflower_idea", status: "completed", isFav: false)
 	]

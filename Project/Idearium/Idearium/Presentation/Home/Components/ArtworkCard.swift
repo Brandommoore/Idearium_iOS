@@ -42,11 +42,15 @@ extension ArtworkCard {
 			.foregroundColor(.clear)
 			.frame(width: 370, height: 380)
 			.background(
-				image
-					.resizable()
-					.aspectRatio(contentMode: .fill)
-					.frame(width: 370, height: 380)
-					.clipped()
+				AsyncImage(url: getUrlFromString(imageURLString: idea.image!),
+						   content: { image in
+					image.resizable()
+						.aspectRatio(contentMode: .fill)
+						.frame(width: 370, height: 380)
+						.clipped()
+				}, placeholder: {
+					LoadView()
+				})
 			)
 			.cornerRadius(20)
 			.overlay(
@@ -58,6 +62,13 @@ extension ArtworkCard {
 				ArtworkCardDescription(prompt: prompt)
 					.position(.init(x: 370/2, y: 348))
 			)
+	}
+	
+	func getUrlFromString(imageURLString: String) -> URL? {
+		guard let downImageURL: URL = URL(string: imageURLString) else {
+			return nil
+		}
+		return downImageURL
 	}
 }
 

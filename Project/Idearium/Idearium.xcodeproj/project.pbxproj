@@ -40,6 +40,7 @@
 		16DAB4FF2A83782900609036 /* RealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4FE2A83782900609036 /* RealmDB.swift */; };
 		16DAB5022A838A3200609036 /* ReplicateRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB5012A838A3200609036 /* ReplicateRepositoryImp.swift */; };
 		16DAB5052A8397F800609036 /* DeatilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB5042A8397F800609036 /* DeatilViewModel.swift */; };
+		16DAB5072A83BF9800609036 /* SmallCircleAnim.json in Resources */ = {isa = PBXBuildFile; fileRef = 16DAB5062A83BF9800609036 /* SmallCircleAnim.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		16DAB4FE2A83782900609036 /* RealmDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDB.swift; sourceTree = "<group>"; };
 		16DAB5012A838A3200609036 /* ReplicateRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRepositoryImp.swift; sourceTree = "<group>"; };
 		16DAB5042A8397F800609036 /* DeatilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeatilViewModel.swift; sourceTree = "<group>"; };
+		16DAB5062A83BF9800609036 /* SmallCircleAnim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SmallCircleAnim.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 		16DAB4D82A80C59300609036 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				16DAB5062A83BF9800609036 /* SmallCircleAnim.json */,
 				16DAB4D92A80C5A800609036 /* LottieLoadGenAnimation.json */,
 			);
 			path = Animations;
@@ -483,6 +486,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DAB5072A83BF9800609036 /* SmallCircleAnim.json in Resources */,
 				16DAB4DA2A80C5A800609036 /* LottieLoadGenAnimation.json in Resources */,
 				167B1A0E2A7A433E0036BC0F /* Preview Assets.xcassets in Resources */,
 				167B1A0B2A7A433E0036BC0F /* Assets.xcassets in Resources */,
