@@ -64,6 +64,7 @@
 		161433952A7CFA7F00C8D9EB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		161433972A7CFA8C00C8D9EB /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		1614339C2A7D2B4400C8D9EB /* NewArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArtworkView.swift; sourceTree = "<group>"; };
+		161AC06F2A84B8A200CBDDC8 /* Idearium.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Idearium.xctestplan; sourceTree = "<group>"; };
 		1658ABB12A7AA0AC009B2394 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		1675A5AB2A7AA41D000F7868 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1675A5AE2A7AA75F000F7868 /* ArtworkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCard.swift; sourceTree = "<group>"; };
@@ -249,6 +250,7 @@
 		167B19FA2A7A433D0036BC0F = {
 			isa = PBXGroup;
 			children = (
+				161AC06F2A84B8A200CBDDC8 /* Idearium.xctestplan */,
 				167B1A052A7A433D0036BC0F /* Idearium */,
 				167B1A162A7A433E0036BC0F /* IdeariumTests */,
 				167B1A202A7A433E0036BC0F /* IdeariumUITests */,
