@@ -35,11 +35,27 @@ class ReplicateRepositoryImp: ReplicateRepositoryProtocol {
 		completion(idea!)
 		// En este momento hay que pasar a una detailView y pasar la Idea
 		let ideaRealm = realmDB.transformIdeaToIdeaRealm(idea: idea!)
+		DispatchQueue.main.async {
+			self.saveIdea(ideaRealm: ideaRealm)
+			self.readAllIdeas(isFav: false)
+		}
 	}
 	
 	func saveIdea(ideaRealm: IdeaRealm) {
 		try! realm.write {
 			realm.add(ideaRealm)
+		}
+	}
+	
+	func readAllIdeas(isFav: Bool) -> [IdeaRealm]? {
+		let allIdeas = realm.objects(IdeaRealm.self)
+		if (isFav == false) {
+			return Array(allIdeas)
+		} else {
+			let allIdeasFav = allIdeas.where {
+				$0.isFav == true
+			}
+			return Array(allIdeasFav)
 		}
 	}
 	

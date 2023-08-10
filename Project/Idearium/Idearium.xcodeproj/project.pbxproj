@@ -41,6 +41,8 @@
 		16DAB5022A838A3200609036 /* ReplicateRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB5012A838A3200609036 /* ReplicateRepositoryImp.swift */; };
 		16DAB5052A8397F800609036 /* DeatilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB5042A8397F800609036 /* DeatilViewModel.swift */; };
 		16DAB5072A83BF9800609036 /* SmallCircleAnim.json in Resources */ = {isa = PBXBuildFile; fileRef = 16DAB5062A83BF9800609036 /* SmallCircleAnim.json */; };
+		16DFC7D22A84C535004FECDF /* NetworkFetchingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DFC7D12A84C535004FECDF /* NetworkFetchingMock.swift */; };
+		16DFC7D52A84C64D004FECDF /* ReplicateRemSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DFC7D42A84C64D004FECDF /* ReplicateRemSourceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		16DAB5012A838A3200609036 /* ReplicateRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRepositoryImp.swift; sourceTree = "<group>"; };
 		16DAB5042A8397F800609036 /* DeatilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeatilViewModel.swift; sourceTree = "<group>"; };
 		16DAB5062A83BF9800609036 /* SmallCircleAnim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SmallCircleAnim.json; sourceTree = "<group>"; };
+		16DFC7D12A84C535004FECDF /* NetworkFetchingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingMock.swift; sourceTree = "<group>"; };
+		16DFC7D42A84C64D004FECDF /* ReplicateRemSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRemSourceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +295,8 @@
 		167B1A162A7A433E0036BC0F /* IdeariumTests */ = {
 			isa = PBXGroup;
 			children = (
+				16DFC7D32A84C5B6004FECDF /* Suts */,
+				16DFC7CE2A84C4C9004FECDF /* TestUtils */,
 				167B1A172A7A433E0036BC0F /* IdeariumTests.swift */,
 			);
 			path = IdeariumTests;
@@ -373,6 +379,22 @@
 				16DAB4FE2A83782900609036 /* RealmDB.swift */,
 			);
 			path = RealmDB;
+			sourceTree = "<group>";
+		};
+		16DFC7CE2A84C4C9004FECDF /* TestUtils */ = {
+			isa = PBXGroup;
+			children = (
+				16DFC7D12A84C535004FECDF /* NetworkFetchingMock.swift */,
+			);
+			path = TestUtils;
+			sourceTree = "<group>";
+		};
+		16DFC7D32A84C5B6004FECDF /* Suts */ = {
+			isa = PBXGroup;
+			children = (
+				16DFC7D42A84C64D004FECDF /* ReplicateRemSourceTest.swift */,
+			);
+			path = Suts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,6 +569,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DFC7D22A84C535004FECDF /* NetworkFetchingMock.swift in Sources */,
+				16DFC7D52A84C64D004FECDF /* ReplicateRemSourceTest.swift in Sources */,
 				167B1A182A7A433E0036BC0F /* IdeariumTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
