@@ -13,6 +13,9 @@ struct DetailView: View {
 	@State var isFav: Bool = false
 	@EnvironmentObject var rootViewModel: RootViewModel
 	
+	// To dismiss navigationLink
+	@Environment(\.dismiss) private var dismiss
+	
 	// MARK: Vars
 	var idea: Idea
 	var windowWidth = UIScreen.main.bounds.size.width
@@ -34,6 +37,7 @@ struct DetailView: View {
 		.frame(maxWidth: .infinity, maxHeight: .infinity)
 		.background(Color("AppBackgroundColor"))
 		.preferredColorScheme(.dark)
+		.navigationBarBackButtonHidden(true)
 	}
 }
 
@@ -93,12 +97,12 @@ extension DetailView {
 		}.multilineTextAlignment(.leading)
 	}
 	
-	// Return button of topNavigationBar
+	// Return button of NaviationLink
 	func returnButton() -> some View {
 		Button{
-			print("Return button pulsed")
+			print("DetailView button pulsed")
+			dismiss()
 			rootViewModel.status = .home
-			//HomeView()
 		} label: {
 			Image(systemName: "arrowtriangle.left.fill")
 				.resizable()

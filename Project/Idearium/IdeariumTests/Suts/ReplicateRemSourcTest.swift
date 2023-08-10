@@ -41,5 +41,18 @@ final class ReplicateRemSourcTest: XCTestCase {
 		// THEN
 		XCTAssertEqual(finalPrediction, expectedPrediction, "error: prediction must be equal")
 	}
+	
+	func testGetFinalPrediction_whenInsertPredictions_returnTransformedPrediction() throws {
+		// GIVEN
+		let initialPrediction = Prediction(id: id, inputPrompt: inputPrompt, output: [], status: status)
+		let initialPredictionResponse = Prediction(id: id, inputPrompt: inputPrompt, output: ["urlImage"], status: "succeed")
+		let expectedPrediction = Prediction(id: id, inputPrompt: inputPrompt, output: ["urlImage"], status: "succeed")
+		
+		// WHEN
+		let finalPrediction = sut?.getFinalPrediction(predictionResponse: initialPredictionResponse, prediction: initialPrediction)
+		
+		// THEN
+		XCTAssertEqual(finalPrediction, expectedPrediction, "error: prediction must be equal")
+	}
 
 }
