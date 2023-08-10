@@ -8,15 +8,15 @@
 import Foundation
 @testable import Idearium
 
-class NetworkFetchingMock: NetworkfetchingProtocol {
-	let result: Result<Data, Error>
-	
-	init(returning result: Result<Data, Error>) {
-		self.result = result
-	}
-	
-	func load(_ request: URLRequest) -> AnyPublisher<Data, Error> {
-		return result.publisher
-			.eraseToAnyPublisher()
-	}
-}
+//class NetworkFetchingMock: NetworkfetchingProtocol {
+//	let result: Result<Data, Error>
+//
+//	init(returning result: Result<Data, Error>) {
+//		self.result = result
+//	}
+//
+//	func load(_ request: URLRequest) -> AnyPublisher<Data, Error> {
+//		return result.publisher
+//			.eraseToAnyPublisher()
+//	}
+//}

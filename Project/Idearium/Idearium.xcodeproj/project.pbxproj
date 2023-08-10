@@ -21,6 +21,8 @@
 		167B1A222A7A433E0036BC0F /* IdeariumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A212A7A433E0036BC0F /* IdeariumUITests.swift */; };
 		167B1A242A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B1A232A7A433E0036BC0F /* IdeariumUITestsLaunchTests.swift */; };
 		167B1A322A7A435C0036BC0F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 167B1A312A7A435C0036BC0F /* Lottie */; };
+		1682FAAC2A84E8C2004E9726 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4E72A80CC0200609036 /* Tokens.swift */; };
+		1682FAAD2A84E8F6004E9726 /* ReplicateDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4E52A80CBE900609036 /* ReplicateDataSourceProtocol.swift */; };
 		1684B5582A7AD8F500E79A2A /* ArtworkCardDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B5572A7AD8F500E79A2A /* ArtworkCardDescription.swift */; };
 		1684B55B2A7B0F7B00E79A2A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684B55A2A7B0F7B00E79A2A /* DetailView.swift */; };
 		16DAB4D72A80C3C700609036 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4D62A80C3C700609036 /* LoadView.swift */; };
@@ -42,7 +44,12 @@
 		16DAB5052A8397F800609036 /* DeatilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB5042A8397F800609036 /* DeatilViewModel.swift */; };
 		16DAB5072A83BF9800609036 /* SmallCircleAnim.json in Resources */ = {isa = PBXBuildFile; fileRef = 16DAB5062A83BF9800609036 /* SmallCircleAnim.json */; };
 		16DFC7D22A84C535004FECDF /* NetworkFetchingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DFC7D12A84C535004FECDF /* NetworkFetchingMock.swift */; };
-		16DFC7D52A84C64D004FECDF /* ReplicateRemSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DFC7D42A84C64D004FECDF /* ReplicateRemSourceTest.swift */; };
+		16DFC7D72A84DE23004FECDF /* ReplicateRemSourcTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DFC7D62A84DE23004FECDF /* ReplicateRemSourcTest.swift */; };
+		16DFC7D82A84DE75004FECDF /* ReplicateRemDatSourImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4E22A80CBBE00609036 /* ReplicateRemDatSourImp.swift */; };
+		16DFC7DD2A84E257004FECDF /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DAB4DF2A80CB4D00609036 /* Prediction.swift */; };
+		16DFC7E02A84E780004FECDF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 16DFC7DF2A84E780004FECDF /* Lottie */; };
+		16DFC7E22A84E784004FECDF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 16DFC7E12A84E784004FECDF /* Realm */; };
+		16DFC7E42A84E788004FECDF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 16DFC7E32A84E788004FECDF /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +106,7 @@
 		16DAB5042A8397F800609036 /* DeatilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeatilViewModel.swift; sourceTree = "<group>"; };
 		16DAB5062A83BF9800609036 /* SmallCircleAnim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SmallCircleAnim.json; sourceTree = "<group>"; };
 		16DFC7D12A84C535004FECDF /* NetworkFetchingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingMock.swift; sourceTree = "<group>"; };
-		16DFC7D42A84C64D004FECDF /* ReplicateRemSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRemSourceTest.swift; sourceTree = "<group>"; };
+		16DFC7D62A84DE23004FECDF /* ReplicateRemSourcTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateRemSourcTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DFC7E42A84E788004FECDF /* RealmSwift in Frameworks */,
+				16DFC7E22A84E784004FECDF /* Realm in Frameworks */,
+				16DFC7E02A84E780004FECDF /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +269,7 @@
 				167B1A162A7A433E0036BC0F /* IdeariumTests */,
 				167B1A202A7A433E0036BC0F /* IdeariumUITests */,
 				167B1A042A7A433D0036BC0F /* Products */,
+				16DFC7DE2A84E780004FECDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,6 +306,7 @@
 		167B1A162A7A433E0036BC0F /* IdeariumTests */ = {
 			isa = PBXGroup;
 			children = (
+				16DFC7D92A84DFE4004FECDF /* Mocks */,
 				16DFC7D32A84C5B6004FECDF /* Suts */,
 				16DFC7CE2A84C4C9004FECDF /* TestUtils */,
 				167B1A172A7A433E0036BC0F /* IdeariumTests.swift */,
@@ -392,9 +404,23 @@
 		16DFC7D32A84C5B6004FECDF /* Suts */ = {
 			isa = PBXGroup;
 			children = (
-				16DFC7D42A84C64D004FECDF /* ReplicateRemSourceTest.swift */,
+				16DFC7D62A84DE23004FECDF /* ReplicateRemSourcTest.swift */,
 			);
 			path = Suts;
+			sourceTree = "<group>";
+		};
+		16DFC7D92A84DFE4004FECDF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		16DFC7DE2A84E780004FECDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +462,11 @@
 				167B1A152A7A433E0036BC0F /* PBXTargetDependency */,
 			);
 			name = IdeariumTests;
+			packageProductDependencies = (
+				16DFC7DF2A84E780004FECDF /* Lottie */,
+				16DFC7E12A84E784004FECDF /* Realm */,
+				16DFC7E32A84E788004FECDF /* RealmSwift */,
+			);
 			productName = IdeariumTests;
 			productReference = 167B1A132A7A433E0036BC0F /* IdeariumTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -569,9 +600,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DFC7D82A84DE75004FECDF /* ReplicateRemDatSourImp.swift in Sources */,
+				1682FAAD2A84E8F6004E9726 /* ReplicateDataSourceProtocol.swift in Sources */,
+				16DFC7DD2A84E257004FECDF /* Prediction.swift in Sources */,
+				16DFC7D72A84DE23004FECDF /* ReplicateRemSourcTest.swift in Sources */,
 				16DFC7D22A84C535004FECDF /* NetworkFetchingMock.swift in Sources */,
-				16DFC7D52A84C64D004FECDF /* ReplicateRemSourceTest.swift in Sources */,
 				167B1A182A7A433E0036BC0F /* IdeariumTests.swift in Sources */,
+				1682FAAC2A84E8C2004E9726 /* Tokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,6 +951,21 @@
 			productName = Realm;
 		};
 		16DAB4FB2A836AA400609036 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16DAB4F82A836AA300609036 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		16DFC7DF2A84E780004FECDF /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 167B1A302A7A435C0036BC0F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		16DFC7E12A84E784004FECDF /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16DAB4F82A836AA300609036 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		16DFC7E32A84E788004FECDF /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 16DAB4F82A836AA300609036 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;

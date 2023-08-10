@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Prediction: Decodable {
+struct Prediction: Codable, Equatable {
 	let id: String?
 	let inputPrompt: String?
 	let output: [String]?

@@ -37,7 +37,6 @@ class ReplicateRepositoryImp: ReplicateRepositoryProtocol {
 		let ideaRealm = realmDB.transformIdeaToIdeaRealm(idea: idea!)
 		DispatchQueue.main.async {
 			self.saveIdea(ideaRealm: ideaRealm)
-			self.readAllIdeas(isFav: false)
 		}
 	}
 	
