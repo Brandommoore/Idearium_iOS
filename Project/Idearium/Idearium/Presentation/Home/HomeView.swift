@@ -11,18 +11,11 @@ struct HomeView: View {
 	
 	// MARK: - Properties
 	@EnvironmentObject var rootViewModel: RootViewModel
-	//@ObservedObject var homeViewModel: HomeViewModel
+	@ObservedObject var homeViewModel: HomeViewModel
 	
-//	init(homeViewModel: HomeViewModel) {
-//		self.homeViewModel
-//	}
-	
-	// MARK: - Mock
-	let ideasMock: [Idea] = [
-		.init(id: "0", systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "https://replicate.delivery/pbxt/sWeZFZou6v3CPKuoJbqX46ugPaHT1DcsWYx0srPmGrMOCPYIA/out-0.png", status: "completed", isFav: false),
-		.init(id: "1", systemId: "7fsh23", prompt: "Queen cat with a gold crown in the head", image: "https://replicate.delivery/pbxt/aooDunhAPcbUBh979fEblu4qqohEtlG0dPJUf1aLuUkMowCQA/out-0.png", status: "completed", isFav: false),
-		.init(id: "2", systemId: "9fb273", prompt: "Apainting on canvas of a landscape with some sunflowers and clouds in the background", image: "https://replicate.com/api/models/stability-ai/stable-diffusion/files/0d5e6ce0-dd85-4dd8-a087-a9c59876b456/out-0.png", status: "completed", isFav: false)
-	]
+	init(homeViewModel: HomeViewModel) {
+		self.homeViewModel = homeViewModel
+	}
 	
 	// MARK: - Vars
 	let bgcol = Color("AppBackgroundColor")
@@ -32,15 +25,17 @@ struct HomeView: View {
 		VStack(alignment: .leading, spacing: 0) {
 			topBar()
 			NavigationStack {
-				List(ideasMock, id: \.self) { idea in
-					NavigationLink {
-						DetailView(idea: idea)
-					} label: {
-						ArtworkCard(idea: idea)
-					}
-					.padding(.leading, 20)
-					.scrollContentBackground(.hidden)
-					.background(Color("AppBackgroundColor"))
+				List(homeViewModel.ideas, id: \.self){ idea in
+					//ForEach(homeViewModel.ideas) { idea in
+						NavigationLink {
+							DetailView(idea: idea)
+						} label: {
+							ArtworkCard(idea: idea)
+						}
+						.padding(.leading, 20)
+						.scrollContentBackground(.hidden)
+						.background(Color("AppBackgroundColor"))
+					//}
 				}
 				.scrollIndicators(.hidden)
 				.padding([.leading, .trailing], 9)
@@ -85,8 +80,8 @@ extension HomeView {
 	}
 }
 
-struct HomeView_Previews: PreviewProvider {
-	static var previews: some View {
-		HomeView()
-	}
-}
+//struct HomeView_Previews: PreviewProvider {
+//	static var previews: some View {
+//		HomeView()
+//	}
+//}

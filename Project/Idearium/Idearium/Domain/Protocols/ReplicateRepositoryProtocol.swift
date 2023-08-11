@@ -9,4 +9,5 @@ import Foundation
 
 protocol ReplicateRepositoryProtocol {
 	func createIdea(prompt: String, completion: @escaping (Idea) -> ()) async throws
+	func readAllIdeas(isFav: Bool) -> [IdeaRealm]?
 }

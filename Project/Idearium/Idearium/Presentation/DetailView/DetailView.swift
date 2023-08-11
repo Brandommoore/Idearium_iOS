@@ -25,8 +25,8 @@ struct DetailView: View {
 			imageDetailView(image: idea.image!)
 			Spacer().frame(height: 30)
 			VStack(alignment: .leading, spacing: 20){
-				textLabelComponent(title: "ID", description: idea.systemId ?? "nill")
-				textLabelComponent(title: "PROMT", description: idea.prompt ?? "nill", promptType: true)
+				textLabelComponent(title: "ID", description: idea.systemId!)
+				textLabelComponent(title: "PROMT", description: idea.prompt!, promptType: true)
 			}
 			.multilineTextAlignment(.leading)
 			.padding(.leading)
@@ -140,6 +140,6 @@ extension DetailView {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-		DetailView(idea: .init(id: "0", systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "astronaut_horse", status: "completed", isFav: false))
+		DetailView(idea: .init(systemId: "hfsudf", prompt: "Astronaut riding a horse on mars, hd", image: "astronaut_horse", status: "completed", isFav: false))
     }
 }

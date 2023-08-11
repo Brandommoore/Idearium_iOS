@@ -15,7 +15,7 @@ struct SplashScreen: View {
 	
     var body: some View {
 		if self.isActive {
-			HomeView()
+			//HomeView()
 		} else {
 			ZStack(alignment: .center) {
 				Rectangle().fill(Color("AppBackgroundColor"))

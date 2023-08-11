@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Idea: Hashable, Encodable, Decodable {
+struct Idea: Hashable, Encodable, Decodable, Identifiable {
 	var id: String?
 	var systemId: String?
 	var prompt: String?

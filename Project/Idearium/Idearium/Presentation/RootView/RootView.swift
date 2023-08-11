@@ -17,7 +17,8 @@ struct RootView: View {
 		case .splash:
 			SplashScreen()
 		case .home:
-			HomeView()
+			let homeViewModel = HomeViewModel(repository: rootViewModel.repository)
+			HomeView(homeViewModel: homeViewModel)
 		case .loadingHome:
 			LoadView()
 		case .loadingPrediction:

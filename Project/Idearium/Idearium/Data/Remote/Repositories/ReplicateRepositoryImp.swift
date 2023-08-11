@@ -15,7 +15,6 @@ class ReplicateRepositoryImp: ReplicateRepositoryProtocol {
 	private let replicateDataSource: ReplicateRemDatSourImp
 	//private let bridgeModels = BridgeModels(prediction)
 	private let realm = try! Realm()
-	private let realmDB = RealmDB()
 	
 	init(replicateDataSource: ReplicateRemDatSourImp) {
 		self.replicateDataSource = replicateDataSource
@@ -34,7 +33,7 @@ class ReplicateRepositoryImp: ReplicateRepositoryProtocol {
 		let idea = transformToIdeaModel(prediction: prediction!)
 		completion(idea!)
 		// En este momento hay que pasar a una detailView y pasar la Idea
-		let ideaRealm = realmDB.transformIdeaToIdeaRealm(idea: idea!)
+		let ideaRealm = RealmDB.transformIdea_To_IdeaRealm(idea: idea!)
 		DispatchQueue.main.async {
 			self.saveIdea(ideaRealm: ideaRealm)
 		}
